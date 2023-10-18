@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<button> 
+<a href="{{ path('app_vendres_new', {'numeroTicket': numeroTicket}) }}">NOUVELLE LIGNE</a>
+</button> 
+
+</button><br> <br>
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th>ID de l'article</th>
+                <th>Nom de l'article</th>
+                <th>Quantité</th>
+                <th>Prix de vente</th>
+                <th>Sous-total</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% set total = 0 %}
+            {% for vendre in vendres %}
+                <tr>
+                    <td>{{ vendre.getIdArticle() }}</td>
+                    <td>{{ vendre.getNomArticle() }}</td>
+                    <td>x{{ vendre.getQuantite() is not null ? vendre.getQuantite() : 'Non renseigné' }}</td>
+                    <td>{{ vendre.getPrixVente() is not null ? vendre.getPrixVente() : 'Non renseigné' }} €</td>
+                    {% set sousTotal = vendre.getPrixVente() * vendre.getQuantite() %}
+                    <td>{{ sousTotal }} €</td>
+                    {% set total = total + sousTotal %}
+                    <td><a href="{{ path('app_vendres_edit',{
+                      'idArticle': vendre.getIdArticle(),
+                      'qte' : vendre.getQuantite(),
+                      'prix': vendre.getPrixVente(),
+                      'numeroTicket':numeroTicket
+                      }) 
+                      }}">edit</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h1> TOTAL DU TICKET : {{ total }} € </h1>
+ <a href="{{ path('app_tickets_index') }}">Retour vers la liste des tickets</a>
+
+{% endblock %}

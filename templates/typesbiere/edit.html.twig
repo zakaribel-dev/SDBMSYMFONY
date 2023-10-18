@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Typebiere{% endblock %}
+
+{% block body %}
+    <h1>Edit Typebiere</h1>
+
+    {{ include('typesbiere/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_typesbiere_index') }}">back to list</a>
+
+    {{ include('typesbiere/_delete_form.html.twig') }}
+{% endblock %}

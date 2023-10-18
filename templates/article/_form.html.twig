@@ -1,0 +1,12 @@
+{{ form_start(form) }}
+    {{ form_row(form.nomArticle) }}
+    {{ form_row(form.prixAchat) }}
+    {{ form_row(form.volume) }}
+    {{ form_row(form.titrage) }}
+
+    {{ form_row(form.idMarque, {'label': 'Marque'}) }}
+    {{ form_row(form.idCouleur, {'label': 'Couleur'}) }}
+    {{ form_row(form.idType, {'label': 'Type'}) }}
+
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

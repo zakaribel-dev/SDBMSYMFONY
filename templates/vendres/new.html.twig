@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Créer une nouvelle ligne dans le ticket</h1>
+
+    {{ form_start(form) }}
+    {{ form_row(form.article) }}
+    {{ form_row(form.quantite) }}
+    {{ form_row(form.prixVente) }}
+    {# ... d'autres champs ou actions de formulaire #}
+    <button type="submit">Enregistrer</button>
+    {{ form_end(form) }}
+
+    <a href="{{ path('app_vendres_index', {'numeroTicket': numeroTicket}) }}">Retour</a>
+
+{% endblock %}
