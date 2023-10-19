@@ -87,16 +87,16 @@ class Article
         return $this->idCouleur;
     }
 
-    public function setIdCouleur(?Couleur $idCouleur): self
+    public function setIdCouleur(?Couleur $idCouleur): self // self pour qu'il fasse reference à la classe Couleur quand il set la value
     {
         $this->idCouleur = $idCouleur;
 
         return $this;
     }
 
-    public function getIdMarque(): ?Marque
+    public function getIdMarque(): ?Marque // ?Marque veut dire que la methode doit se referer à l'entité marque
     {
-        return $this->idMarque;
+        return $this->idMarque; // de ce fait, idMarque donne accès aux methodes de l'entité MArque
     }
 
     public function setIdMarque(?Couleur $idMarque): self
@@ -106,9 +106,7 @@ class Article
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
+  
     public function getNomCouleur(): ?string
     {
         if ($this->idCouleur !== null) {
@@ -117,9 +115,7 @@ class Article
             return "non renseigné";
         }
     }
-    /**
-     * @return string|null
-     */
+    
     public function getNomType(): ?string
     {
         if ($this->idType !== null) {
@@ -129,9 +125,7 @@ class Article
         }
     }
 
-    /**
-     * @return string|null
-     */
+ 
     public function getNomMarque(): ?string
     {
         if ($this->idMarque !== null) {

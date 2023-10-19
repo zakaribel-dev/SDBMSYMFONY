@@ -1,0 +1,20 @@
+* {
+  text-align: center !important;
+}
+
+.navbar.bg-dark {
+  background-color: blueviolet !important;
+}
+
+.navbar.bg-dark .navbar-brand,
+.navbar.bg-dark .navbar-nav .nav-link {
+  color: #ffffff !important;
+}
+
+.navbar.bg-dark .navbar-nav .nav-item.active .nav-link {
+  color: #f39c12 !important;
+}
+
+h1{
+  margin-top: 25px;
+}

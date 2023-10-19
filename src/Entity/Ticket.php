@@ -66,6 +66,7 @@ class Ticket
     public function __construct()
     {
         $this->dateVente = new \DateTime();
+        // dès l'initialisation de l'entité je spécifie que la prop vendres est uen collection
         $this->vendres = new ArrayCollection();
     }
 
@@ -84,6 +85,8 @@ class Ticket
         return $this;
     }
 
+
+
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
@@ -94,7 +97,10 @@ class Ticket
     /**
      * @return Collection|Vendre[]
      */
-    public function getVendres(): Collection
+
+
+// MA COLLECTION GETVENDRE ME PERMET DE RECUPERER TOUTE MES VENTES LIE A MON TICKET PAR LE BIAIS DE LA PROP VENDRES
+    public function getVendres(): Collection 
     {
         return $this->vendres;
     }

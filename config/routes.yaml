@@ -4,8 +4,17 @@ controllers:
         namespace: App\Controller
     type: attribute
 
-
 app_vendres_index:
     path: '/vendres/{numeroTicket}'
     controller: 'App\Controller\VendresController::index'
+    methods: ['GET']
+
+app_home:
+    path: '/'
+    controller: 'App\Controller\HomeController::index'
+    methods: ['GET']
+
+app_home_second_route:
+    path: '/home'
+    controller: 'App\Controller\HomeController::index'
     methods: ['GET']

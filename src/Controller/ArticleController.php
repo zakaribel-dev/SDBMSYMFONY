@@ -21,7 +21,7 @@ class ArticleController extends AbstractController
         $articles = $entityManager
             ->getRepository(Article::class)
             ->findBy([], [], 25); 
-
+// premier param de findby () ça va être ce que je select, deuxieme param c'est l'ordre et le troisieme la limite
         return $this->render('article/index.html.twig', [
             'articles' => $articles,
         ]);
