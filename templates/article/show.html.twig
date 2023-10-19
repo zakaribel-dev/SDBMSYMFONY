@@ -3,8 +3,9 @@
 {% block title %}Article{% endblock %}
 
 {% block body %}
-    <h1>Article</h1>
+    <h1>{{ article.nomArticle }}</h1>
 
+    <div class="container">
     <table class="table table-striped table-dark">
         <tbody>
             <tr>
@@ -29,7 +30,7 @@
             </tr>
         </tbody>
     </table>
-
+    </div>
     <a href="{{ path('app_article_index') }}">back to list</a>
 
     <a href="{{ path('app_article_edit', {'idArticle': article.idArticle}) }}">edit</a>

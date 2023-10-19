@@ -90,11 +90,11 @@ class Vendre
         return $this->ticket;
     }
 
-    public function setArticle(?Article $article): self
+    public function setArticle(?Article $article): self // objet de l'instance Article
     {
-        $this->article = $article;
+        $this->article = $article; // prop article de Vendre devient l'objet de l'instance Article
 
-        return $this;
+        return $this; // en faisant return this, symfony va pouvoir chainer des methodes genre setArticle()->setPrix()
     }
 
     public function setTicket(?Ticket $ticket): self

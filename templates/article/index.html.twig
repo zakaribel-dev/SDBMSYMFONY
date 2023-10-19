@@ -36,8 +36,8 @@
  
 
                 <td>
-                    <a href="{{ path('app_article_show', {'idArticle': article.idArticle}) }}">show</a>
-                    <a href="{{ path('app_article_edit', {'idArticle': article.idArticle}) }}">edit</a>
+                    <a role="button" href="{{ path('app_article_show', {'idArticle': article.idArticle}) }}"><i class="fa-solid fa-magnifying-glass" style="color: blueviolet;"></i></a>
+                    <a role="button" href="{{ path('app_article_edit', {'idArticle': article.idArticle}) }}"><i class="fa-regular fa-pen-to-square" style="color: blueviolet;"></i></a>
                 </td>
             </tr>
         {% else %}

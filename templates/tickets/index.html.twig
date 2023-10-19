@@ -6,7 +6,7 @@
     <h1 class="display-4">Tickets</h1>
 <br>
 
-<a class="btn btn-primary btn-lg " role="button" href="{{ path('app_tickets_new') }}">NOUVEAU TICKET</a>
+<a class="btn btn-primary btn-lg" role="button" href="{{ path('app_tickets_new') }}">NOUVEAU TICKET</a>
 </button> 
 <br>
 <br>
@@ -25,11 +25,11 @@
             <tr>
                 <td>{{ ticket.annee }}</td>
                 <td>{{ ticket.numeroTicket }}</td>
-                <td>{{ ticket.dateVente ? ticket.dateVente|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ ticket.dateVente ? ticket.dateVente|date('d/m à H:i:s') : '' }}</td>
                 <td>
-               <a href="{{ path('app_tickets_show', {'annee': ticket.annee}) }}">show</a>
-<a href="{{ path('app_tickets_edit', {'numeroTicket': ticket.numeroTicket}) }}">edit</a>
-                <a href="{{ path('app_vendres_index', {'numeroTicket': ticket.numeroTicket}) }}">Voir détails</a>
+<a role="button" href="{{ path('app_tickets_show', {'annee': ticket.annee}) }}"><i class="fa-solid fa-magnifying-glass" style="color: blueviolet;"></i></a>
+<a role="button" href="{{ path('app_tickets_edit', {'numeroTicket': ticket.numeroTicket}) }}"><i class="fa-regular fa-pen-to-square" style="color: blueviolet;"></i></a>
+<a role="button" href="{{ path('app_vendres_index', {'numeroTicket': ticket.numeroTicket}) }}">Voir détails</a>
 
                 </td>
             </tr>
