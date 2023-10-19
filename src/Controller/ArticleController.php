@@ -16,16 +16,27 @@ class ArticleController extends AbstractController
 {
 
     #[Route('/', name: 'app_article_index', methods: ['GET'])]
-    public function index(EntityManagerInterface $entityManager): Response
+    public function index(EntityManagerInterface $entityManager, Request $request, PaginatorInterface $paginator): Response
     {
         $articles = $entityManager
             ->getRepository(Article::class)
-            ->findBy([], [], 25); 
-// premier param de findby () ça va être ce que je select, deuxieme param c'est l'ordre et le troisieme la limite
+            ->findBy([], []);
+        // premier param de findby () ça va être ce que je select, deuxieme param c'est l'ordre et le troisieme la limite
+
+
+        $pagination = $paginator->paginate(
+            $articles,
+            $request->query->getInt('page', 1), // numéro de la page par défaut ca va etre 1
+            5  // nombre d'articles par page
+        );
+        
+        $pagination->setCustomParameters(['addClass' => 'new']);
+
         return $this->render('article/index.html.twig', [
-            'articles' => $articles,
+            'pagination' => $pagination
         ]);
     }
+
 
     #[Route('/new', name: 'app_article_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
@@ -76,7 +87,7 @@ class ArticleController extends AbstractController
     #[Route('/{idArticle}', name: 'app_article_delete', methods: ['POST'])]
     public function delete(Request $request, Article $article, EntityManagerInterface $entityManager): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$article->getIdArticle(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $article->getIdArticle(), $request->request->get('_token'))) {
             $entityManager->remove($article);
             $entityManager->flush();
         }

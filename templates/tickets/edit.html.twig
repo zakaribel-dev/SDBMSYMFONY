@@ -3,11 +3,14 @@
 {% block title %}Edit Ticket{% endblock %}
 
 {% block body %}
-    <h1>Edit Ticket</h1>
+<br>
+    <a class="new" href="{{ path('app_tickets_index') }}">Retour aux tickets</a>
 
-    {{ include('tickets/_form.html.twig', {'button_label': 'Update'}) }}
+    <h1>Modifier ticket</h1>
 
-    <a href="{{ path('app_tickets_index') }}">back to list</a>
+    {{ include('tickets/_form.html.twig', {'button_label': 'Enregistrer modification'}) }}
+
+
 
     {{ include('tickets/_delete_form.html.twig') }}
 {% endblock %}

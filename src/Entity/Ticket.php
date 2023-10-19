@@ -42,6 +42,7 @@ class Ticket
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="NONE")
      */
+
     private $numeroTicket;
 
     public function getNumeroTicket(): ?int
@@ -67,7 +68,8 @@ class Ticket
     {
         $this->dateVente = new \DateTime();
         // dès l'initialisation de l'entité je spécifie que la prop vendres est uen collection
-        $this->vendres = new ArrayCollection();
+        $this->vendres = new ArrayCollection(); // c'est vendres qui est inversed dans mon annotation de relation dans l'entité Vendre
+
     }
 
     /**
@@ -84,8 +86,6 @@ class Ticket
 
         return $this;
     }
-
-
 
     /**
      * @var \Doctrine\Common\Collections\Collection

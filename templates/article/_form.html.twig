@@ -1,12 +1,27 @@
 {{ form_start(form) }}
-    {{ form_row(form.nomArticle) }}
-    {{ form_row(form.prixAchat) }}
-    {{ form_row(form.volume) }}
-    {{ form_row(form.titrage) }}
+    <div class="form-group">
+        {{ form_row(form.nomArticle, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.prixAchat, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.volume, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.titrage, {'attr': {'class': 'form-control'}}) }}
+    </div>
 
-    {{ form_row(form.idMarque, {'label': 'Marque'}) }}
-    {{ form_row(form.idCouleur, {'label': 'Couleur'}) }}
-    {{ form_row(form.idType, {'label': 'Type'}) }}
-
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <div class="form-group">
+        {{ form_row(form.idMarque, {'label': 'Marque', 'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.idCouleur, {'label': 'Couleur', 'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.idType, {'label': 'Type', 'attr': {'class': 'form-control'}}) }}
+    </div>
+<br>
+    <div class="form-group">
+        <button class="btn btn-primary">{{ button_label|default('Enregistrer') }}</button> <br><br>
 {{ form_end(form) }}

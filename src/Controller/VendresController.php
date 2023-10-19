@@ -29,8 +29,6 @@ class VendresController extends AbstractController
             'numeroTicket' =>$numeroTicket
         ]);
     }
-    
-
 
     #[Route('/new/{numeroTicket}', name: 'app_vendres_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager, $numeroTicket): Response

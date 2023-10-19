@@ -18,7 +18,7 @@ class TicketsController extends AbstractController
     {
         $tickets = $entityManager
             ->getRepository(Ticket::class)
-            ->findBy([], ['numeroTicket' => 'DESC'], 25);
+            ->findBy([], [],2500);
 
 
         return $this->render('tickets/index.html.twig', [
@@ -36,7 +36,7 @@ class TicketsController extends AbstractController
 
         $lastTicketNumber = $entityManager->getRepository(Ticket::class)
             ->createQueryBuilder('t')
-            ->select('MAX(t.numeroTicket)') // jrecup la valeur du dernier ticket
+            ->select('MAX(t.numeroTicket) ') // jrecup la valeur du dernier ticket
             ->getQuery()
             ->getSingleScalarResult(); // recuprer qu'un seul resutat de ma QUERY
 

@@ -1,16 +1,26 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+<br>
+    <a class="new" href="{{ path('app_vendres_index', {'numeroTicket': numeroTicket}) }}">Retour</a>
+
     <h1>Créer une nouvelle ligne dans le ticket</h1>
 
-    {{ form_start(form) }}
-    {{ form_row(form.article) }}
-    {{ form_row(form.quantite) }}
-    {{ form_row(form.prixVente) }}
-    {# ... d'autres champs ou actions de formulaire #}
-    <button type="submit">Enregistrer</button>
-    {{ form_end(form) }}
-
-    <a href="{{ path('app_vendres_index', {'numeroTicket': numeroTicket}) }}">Retour</a>
+   
+{{ form_start(form) }}
+    <div class="form-group">
+        {{ form_row(form.article, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.quantite, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.prixVente, {'attr': {'class': 'form-control'}}) }}
+    </div>
+   <br>
+    <div class="form-group">
+        <button class="btn btn-primary">{{ button_label|default('Enregistrer') }}</button>
+    </div>
+{{ form_end(form) }}
 
 {% endblock %}

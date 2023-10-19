@@ -109,7 +109,7 @@ class Article
   
     public function getNomCouleur(): ?string
     {
-        if ($this->idCouleur !== null) {
+        if ($this->idCouleur !== null) { 
             return $this->idCouleur->getNomCouleur();
         } else {
             return "non renseigné";
@@ -134,7 +134,6 @@ class Article
             return "non renseigné";
         }
     }
-
 
     public function getIdArticle(): ?int
     {

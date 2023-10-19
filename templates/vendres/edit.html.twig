@@ -1,15 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Vendre{% endblock %}
+{% block title %}Modifiez la ligne{% endblock %}
 
 {% block body %}
-    <h1>Modif</h1>
-    <p>Article : {{ vendre.nomArticle }}</p>
-    <p>ID Article : {{ vendre.idArticle }}</p>
+    <h1>Modifiez la ligne</h1>
 
-    {{ include('vendres/_form.html.twig', {'button_label': 'Update'}) }}
 
-    {# <a href="{{ path('app_vendres_index') }}">back to list</a> #}
+    {{ include('vendres/_form.html.twig', {'button_label': 'Enregistrer'}) }}
+
 
     {{ include('vendres/_delete_form.html.twig') }}
 {% endblock %}
