@@ -4,22 +4,22 @@
 
 {% block body %}
 <br>
-    <a class="new" href="{{ path('app_tickets_index') }}">Retour aux tickets</a>
+    <a class="new" href="{{ path('app_tickets_index') }}">{% trans %}Retour aux tickets{% endtrans %}</a>
 
     <h1>Ticket</h1>
     <div class="container">
     <table class="showTicket">
         <tbody>
             <tr>
-                <th class="th_left">Annee</th>
+                <th class="th_left">{% trans %}Annee{% endtrans %}</th>
                 <td class="th_right">{{ ticket.annee }}</td>
             </tr>
             <tr>
-                <th>NumeroTicket</th>
+                <th>{% trans %}Numero Ticket {% endtrans %}</th>
                 <td>{{ ticket.numeroTicket }}</td>
             </tr>
             <tr>
-                <th>DateVente</th>
+                <th>{% trans %}Date Vente {% endtrans %}</th>
                 <td>{{ ticket.dateVente ? ticket.dateVente|date('d/m à H:i:s') : '' }}</td>
             </tr>
            

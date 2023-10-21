@@ -1,5 +1,7 @@
 {% extends 'base.html.twig' %}
 
+    {% block title %}Détails{% endblock %}
+
 {% block body %}
 <br>
 <a class="btn btn-secondary" role="button" href="{{ path('app_tickets_index') }}">Retour vers la liste des tickets</a>
@@ -10,6 +12,7 @@
 
 <br> <br>
 <div class="container">
+        <div class="table-responsive">
     <table class="vente_table" >
         <thead>
             <tr>
@@ -22,7 +25,8 @@
             </tr>
         </thead>
         <tbody>
-            {% set total = 0 %}
+            {% set total = 0 %}  
+  
             {% for vendre in vendres %}
                 <tr>
                     <td>{{ vendre.getIdArticle() }}</td>
@@ -38,15 +42,17 @@
                       'prix': vendre.getPrixVente(),
                       'numeroTicket':numeroTicket
                       }) 
-                      }}"><i class="fa-regular fa-pen-to-square edit" ></i></a></td>
+                      }}"><i class="fa-regular fa-pen-to-square edit_button" ></i></a></td>
                 </tr>
             {% endfor %}
 
         </tbody>
         
-            <h1><i> TOTAL DU TICKET : {{ total }} €</i> </h1>
+            <h1><i> TOTAL DU TICKET : {{ total }} €</i> </h1><br>
+    <div class="msgMobile"><i>Glissez le tableau vers la droite pour le voir en entier <i class="fa-solid fa-arrow-right"></i></div>
     </table>
-
+    
+    </div>
     </div>
 
 {% endblock %}

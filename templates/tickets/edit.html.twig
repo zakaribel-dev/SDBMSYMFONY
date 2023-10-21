@@ -4,11 +4,11 @@
 
 {% block body %}
 <br>
-    <a class="new" href="{{ path('app_tickets_index') }}">Retour aux tickets</a>
+    <a class="new" href="{{ path('app_tickets_index') }}">{% trans %}Retour aux tickets{% endtrans %}</a>
 
-    <h1>Modifier ticket</h1>
+    <h1>{% trans %}Modifier ticket{% endtrans %}</h1>
 
-    {{ include('tickets/_form.html.twig', {'button_label': 'Enregistrer modification'}) }}
+    {{ include('tickets/_form.html.twig', {'button_label': 'Enregistrer modification' |trans}) }}
 
 
 

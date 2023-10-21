@@ -1,121 +1,155 @@
 * {
   text-align: center !important;
-  font-family: 'Play', sans-serif;
-
+  font-family: "Play", sans-serif;
 }
-body{
-  background-color:#9f90cd;
+body {
+  background-color: #9f90cd;
+}
+.table-with-effect,
+.pagination {
+  opacity: 0;
+  transition: opacity 1s ease-out;
 }
 
+.table-with-effect.show_effect,
+.pagination.show_effect {
+  opacity: 1;
+}
+.table-with-effect.show_effect:hover,
+.pagination.show_effect.show_effect:hover {
+  transform: scale(1);
+  transition: opacity 1s ease-out;
+}
 
 .pagination {
   display: flex;
   justify-content: center;
+  margin-bottom: 1%;
 }
 
 .page a {
-  text-decoration: none;
-  padding: 10px;
-  color: #b0abbe;
-  font-size: larger;
-  background-color: #170746;
-  border-radius: 20px;
-  margin: 5px;
-}
-.next a, .last a, .previous a, .first a{
-  text-decoration: none;
-  border-radius: 30px;
-  background-color: #170746;
-  margin: 5px;
-  padding: 10px;
-  color: #b0abbe;
-  font-size: larger;
-
-}
-.current  {
-  color: #822e39;
-  font-size: 25px;
+display: none;
 }
 
-.jumbo{
+.next a,
+.last a,
+.previous a,
+.first a {
+  text-decoration: none;
+  border-radius: 7px;
+  background-color: #170746;
+  margin: 5px;
+  padding: 3px;
+  color: #b0abbe;
+  font-size: medium;
+}
+
+.current {
+  color:#170746;
+  font-size: 18px;
+}
+
+.jumbo {
   background-color: #170746;
 }
-.navbar-brand{
+.navbar-brand {
   margin-left: 1%;
 }
 .navbar.bg-dark {
   background-color: #170746 !important;
-  font-family: 'Play', sans-serif;
-} 
+  font-family: "Play", sans-serif;
+}
+
 
 .navbar.bg-dark .navbar-brand,
 .navbar.bg-dark .navbar-nav .nav-link {
   color: #ffffff !important;
 }
 
+
 .navbar.bg-dark .navbar-nav .nav-item.active .nav-link {
   color: #f39c12 !important;
 }
+.dropdown-item:hover {
+  background-color: #009879 !important;
+}
 
-.nav-link:hover{
+.dropdown-item {
+  background-color:#170746 !important ;
+  color: white;
+}
+
+.dropdown-menu.show {
+    display: block;
+    padding: 0;
+}
+
+
+.nav-link:hover {
   transform: scale(1.3);
   transition: transform 0.3s ease-in-out;
 }
 
-.navbar-nav{
-  margin-left: 35%;
+.navbar-nav {
+  margin-left: 31%;
 }
 
-.nav-link{
-  margin: 5px; 
+.nav-link {
+  margin: 5px;
 }
 
-h1{
+h1 {
   margin-top: 25px;
 }
 
-.actions{
+.actions {
   width: 55px;
 }
-table{
-  border-collapse:collapse;
+table {
+  border-collapse: collapse;
   font-size: 0.9em;
-  font-family: 'Play', sans-serif;
+  font-family: "Play", sans-serif;
   font-size: 14px;
   box-shadow: 20px rgba(156, 199, 131, 0.15);
   margin-left: 15%;
   margin-bottom: 1%;
-  border-radius:6px;
+  border-radius: 6px;
   box-shadow: 16px 3px 10px -7px #3a5f3e, -10px 0px 20px -7px #888;
 }
 
-.table_tickets{
-  margin-left: 29%;
+.table_tickets {
+  margin-left: 35%;
   margin-bottom: 5%;
 }
-.vente_table{
-  margin-left: 20%;
+.table_tickets td {
+  padding: 9px;
+}
+.vente_table {
+  margin-left: 27%;
   margin-bottom: 5%;
 }
-th,tr{
+th,
+tr {
   background-color: #009879;
   color: #170746;
 }
 
-th, td {
-  padding: 12px;
-  width: 100px; 
+th,
+td {
+  padding: 9px;
+  width: 100px;
   box-sizing: border-box;
 }
 
-th{
-color:white;
-background-color: #170746;
-font-size: 15px;
-height: 85px;
+th {
+  color: white;
+  background-color: #170746;
+  font-size: 15px;
+  height: 85px;
 }
 
-td:first-child, th:first-child {
+td:first-child,
+th:first-child {
   border-left: none;
 }
 tbody tr {
@@ -131,26 +165,28 @@ tbody tr.active-row {
   color: #009879;
 }
 
-.show, .edit{
+.show_button,
+.edit_button {
   height: 30px;
   padding: 3px;
   color: #170746;
 }
 
-.show:hover,.edit:hover{
+.show_button:hover,
+.edit_button:hover {
   transform: scale(1.5);
   transition: transform 0.3s ease-in-out;
 }
 
-.th_left{
+.th_left {
   border-radius: 10px 0 0 0;
 }
 
-.th_right{
+.th_right {
   border-radius: 0 10px 0 0;
 }
 
-.new{
+.new {
   background-color: #170746;
   text-decoration: none;
   color: white;
@@ -158,43 +194,37 @@ tbody tr.active-row {
   padding: 10px;
   font-weight: bolder;
 }
-.new:hover{
-  transform: scale(1.5);
-  transition: transform 0.3s ease-in-out;
-}
 
-input{
+input {
   width: 200px;
   margin-left: 25px;
 }
 
-label{
+label {
   padding: 5px;
 }
 
-select{
+select {
   width: 200px;
   margin-left: 25px;
-
 }
 
-footer{
+footer {
   background-color: #170746;
   margin-top: 1%;
 }
 
-.form-control{
-  width: 170px;
+.form-control {
+  width: 180px;
   margin-left: 45%;
 }
 
-.showArticle{
-  margin-left: 40%;
+.showArticle {
+  margin-left: 42%;
 }
 
-.showTicket{
-  margin-left: 40%;
-
+.showTicket {
+  margin-left: 42%;
 }
 
 .arrow-container {
@@ -202,22 +232,80 @@ footer{
   top: 30%;
   left: 40%;
   transform: translateX(-50%);
-  animation: fadeIn 1s ease-out forwards, bounceAnimation 2s infinite; 
+  animation: fadeIn 1s ease-out forwards, bounceAnimation 2s infinite;
 }
+
+
 .bounce {
   animation: bounceAnimation 2s infinite;
 }
 
+.msgMobile{
+  display: none;
+}
+
 @keyframes bounceAnimation {
-  0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
   }
   40% {
-      transform: translateY(-20px);
+    transform: translateY(-20px);
   }
   60% {
-      transform: translateY(-10px);
+    transform: translateY(-10px);
   }
 }
 
+/* mobiles */
+@media (max-width: 767px) {
+  .navbar-nav {
+      margin-left: 10%; 
+  }
+  .dropdown-menu{
+    margin-right: 5%; 
+  }
+  table, .table_tickets, .vente_table{
+    margin-left: 5px;
+  }
+
+  .table_tickets td{
+    padding: 12px;
+  }
+  .msgMobile{
+    display: block;
+  }
+
+  .form-control {
+    width: 180px;
+    margin-left: 27%;
+  }
+
+  .arrow-container {
+    position: fixed;
+    top: 30%;
+    left: 10%;
+    transform: translateX(-50%);
+    animation: fadeIn 1s ease-out forwards, bounceAnimation 2s infinite;
+  }
+
+  .showArticle {
+    margin-left: 22%;
+  }
+  .showTicket {
+    margin-left: 20%;
+  }
+}
+
+/* pc portable et bureau */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* Tablettes */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+}
 

@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     {% block stylesheets %} 
  <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet">
   {% endblock %}
 </head>
@@ -15,6 +18,29 @@
 {% block navbar %}
     {% include '/html_parts/navbar.html.twig' %}
 {% endblock %}
+
+{% for label, messages in app.flashes %}
+{% for message in messages %}
+
+<script>
+Swal.fire({
+  title: '<div class="animate__animated animate__swing">{{message}}</div>', 
+  icon: '{{label}}',
+  showClass: {
+    popup: 'animate__animated animate__fadeInDown'
+  },
+  hideClass: {
+    popup: 'animate__animated animate__fadeOutUp'
+  },
+  customClass: {
+    title: 'swal-title'
+  }
+});
+</script>
+
+{% endfor %}
+{% endfor %}
+
 <div class="flex-grow-1">
     {% block body %}{% endblock %}
 </div>
@@ -22,20 +48,35 @@
     {% include '/html_parts/footer.html.twig' %}
 {% endblock %}
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% block javascripts %}
     <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const arrowContainer = document.querySelector(".arrow-container");
-    const arrow = document.querySelector(".fa-arrow-down");
+        document.addEventListener("DOMContentLoaded", function () {
+            const arrowContainer = document.querySelector(".arrow-container");
+            const arrowDown = document.querySelector(".fa-arrow-down");
+            
+            if (arrowDown) {
+                arrowDown.classList.add("bounce");
+            }
 
-    arrow.classList.add("bounce");
+            window.addEventListener("scroll", function () {
+                if (arrowContainer) {
+                    arrowContainer.style.display = "none";
+                }
+            });
 
-    window.addEventListener("scroll", function () {
-        arrowContainer.style.display = "none";
-    }); 
-});
- </script>
- 
+            const tableWithEffect = document.querySelector(".table-with-effect");
+            const pagination = document.querySelector(".pagination");
+            if (tableWithEffect) {
+                tableWithEffect.classList.add("show_effect");3
+                pagination.classList.add("show_effect");
+
+            }
+        });
+
+       
+    </script>
+{% endblock %}
 </body>
 </html>

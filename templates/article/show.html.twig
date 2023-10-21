@@ -4,7 +4,7 @@
 
 {% block body %}
 <br>
-    <a class="new" href="{{ path('app_article_index') }}">Retour vers articles</a><br>
+    <a class="new" href="{{ path('app_article_index') }}">iRetour vers articles{% endtrans %}</a><br>
 
     <h1>{{ article.nomArticle }}</h1>
     <div class="container">
@@ -15,40 +15,40 @@
     
         <tbody>
             <tr>
-                <th class="th_left">Code Article</th>
+                <th class="th_left">{% trans %}Code Article{% endtrans %}</th>
                 <td class="th_right">{{ article.idArticle }}</td>
             </tr>
             <tr>
-                <th>Nom Article</th>
+                <th>{% trans %}Nom Article{% endtrans %}</th>
                 <td>{{ article.nomArticle }}</td>
             </tr>
             <tr>
-                <th>Prix Achat</th>
-                <td>{{ article.prixAchat }}</td>
+                <th>{% trans %}Prix Achat{% endtrans %}</th>
+                <td>{{ article.prixAchat }}€</td>
             </tr>
             <tr>
-                <th>Volume</th>
-                <td>{{ article.volume }}</td>
+                <th>{% trans %}Volume{% endtrans %}</th>
+                <td>{{ article.volume }}ml</td>
             </tr>
             <tr>
-                <th>Titrage</th>
-                <td>{{ article.titrage }}</td>
+                <th>{% trans %}Titrage{% endtrans %}</th>
+                <td>{{ article.titrage }}%</td>
             </tr>
             <tr>
-                <th>Couleur</th>
+                <th>{% trans %}Couleur{% endtrans %}</th>
                 <td>{{ article.getNomCouleur }}</td>
             </tr>
             <tr>
-                <th>Marque</th>
+                <th>{% trans %}Marque{% endtrans %}</th>
                 <td>{{ article.getNomMarque }}</td>
             </tr>
             <tr>
-                <th>Type</th>
+                <th>{% trans %}Type{% endtrans %}</th>
                 <td>{{ article.getNomType }}</td>
             </tr>
         </tbody>
     </table>
-        <a class="btn btn-primary" href="{{ path('app_article_edit', {'idArticle': article.idArticle}) }}">Modifier cet article</a> <br><br>
+        <a class="btn btn-primary" href="{{ path('app_article_edit', {'idArticle': article.idArticle}) }}">{% trans %}Modifier cet article{% endtrans %}</a> <br><br>
     </div>
 
     {{ include('article/_delete_form.html.twig') }}

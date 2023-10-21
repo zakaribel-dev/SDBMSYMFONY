@@ -99,10 +99,10 @@ class Article
         return $this->idMarque; // de ce fait, idMarque donne accès aux methodes de l'entité MArque
     }
 
-    public function setIdMarque(?Couleur $idMarque): self
+    public function setIdMarque(?Marque $idMarque): self
     {
         $this->idMarque = $idMarque;
-
+    
         return $this;
     }
 

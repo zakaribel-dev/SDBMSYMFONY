@@ -1,12 +1,12 @@
-{{ form_start(form, {'attr': {'class': 'form'}}) }}
-  
-  <div class="mb-3">
+{{ form_start(form) }}
+<div class="form-group">
     {{ form_row(form.annee, {'attr': {'class': 'form-control'}}) }}
-  </div>
-  
-  <button type="submit" class="btn btn-primary">{{ button_label|default('Enregistrer') }}</button>
-
-
+</div>
+<div class="form-group">
+    {{ form_row(form.dateVente, {'attr': {'class': 'form-control'}}) }}
+</div>
+<br>
+<div class="form-group" style="margin-bottom: 20px;">
+    <button class="btn btn-primary">{{ button_label|default('Enregistrer') |trans }}</button> <br><br>
+</div>
 {{ form_end(form) }}
-
-

@@ -1,56 +1,57 @@
-{% extends 'base.html.twig' %}
+    {% extends 'base.html.twig' %}
 
-{% block title %}Article index{% endblock %}
+    {% block title %}Articles{% endblock %}
 
-{% block body %}
-    <h1>Articles</h1>
-<br>
-    <a class="new" href="{{ path('app_article_new') }}">NOUVEL ARTICLE</a>
-<br><br>
+    {% block body %}
+        <h1>Articles</h1>
+    <br>
+<a class="new" href="{{ path('app_article_new') }}">{% trans %}NOUVEL ARTICLE{% endtrans %}</a>
+    <br> <br>
+    <div class="container">
+    <br>
+        {{knp_pagination_render(pagination)}}
+       
+        <div class="table-responsive">
+  <div class="msgMobile">{% trans %}<i>Glissez le tableau vers la droite pour le voir en entier{% endtrans %} <i class="fa-solid fa-arrow-right"></i></div>
+        <table class="table-with-effect">
+            <thead>
+                <tr>
+                    <th class="th_left">{% trans %}Code Article{% endtrans %}</th>
+                    <th>{% trans %}Nom De l'Article{% endtrans %}</th>
+                    <th>{% trans %}Prix d'Achat{% endtrans %}</th>
+                    <th>{% trans %}Volume{% endtrans %}</th>
+                    <th>{% trans %}Titrage{% endtrans %}</th>  
+                    <th>{% trans %}Couleur{% endtrans %}</th>
+                    <th>Type</th>
+                    <th>{% trans %}Marque{% endtrans %}</th>
+                    <th class="th_right">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for article in pagination %}
+                <tr>
+                    <td>{{ article.idArticle }}</td>
+                    <td>{{ article.nomArticle }}</td>
+                    <td>{{ article.prixAchat }}€</td>
+                    <td>{{ article.volume }}ml</td>
+                    <td>{{ article.titrage }}%</td>
+                   <td>{{ article.getNomCouleur == 'non renseigné' ? 'non renseigné'|trans : article.getNomCouleur }}</td>
+                   <td>{{ article.getNomType == 'non renseigné' ? 'non renseigné'|trans : article.getNomType }}</td>
+                   <td>{{ article.getNomMarque == 'non renseigné' ? 'non renseigné'|trans : article.getNomMarque }}</td>
 
-<div class="container">
-<br><br>
-    <div class="table-responsive">
-    <table>
-        <thead>
-            <tr>
-                <th class="th_left">Code Article</th>
-                <th>Nom De l'Article</th>
-                <th>Prix d'Achat</th>
-                <th>Volume</th>
-                <th>Titrage</th>  
-                <th>Couleur</th>
-                <th>Type</th>
-                <th>Marque</th>
-                <th class="th_right">actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for article in pagination %}
-            <tr>
-                <td>{{ article.idArticle }}</td>
-                <td>{{ article.nomArticle }}</td>
-                <td>{{ article.prixAchat }}€</td>
-                <td>{{ article.volume }}</td>
-                <td>{{ article.titrage }}</td>
-                <td>{{ article.getNomCouleur}}</td> 
-                <td>{{ article.getNomType}}</td>
-                <td>{{ article.getNomMarque}}</td> 
-
-                <td>
-                    <a role="button" href="{{ path('app_article_show', {'idArticle': article.idArticle}) }}"><i class="fa-solid fa-magnifying-glass show" ></i></a>
-                    <a role="button" href="{{ path('app_article_edit', {'idArticle': article.idArticle}) }}"><i class="fa-regular fa-pen-to-square edit" ></i></a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+                    <td>
+                        <a role="button" href="{{ path('app_article_show', {'idArticle': article.idArticle}) }}"><i class="fa-solid fa-magnifying-glass show_button" ></i></a>
+                        <a role="button" href="{{ path('app_article_edit', {'idArticle': article.idArticle}) }}"><i class="fa-regular fa-pen-to-square edit_button" ></i></a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="6">Empty</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        </div> 
     </div> 
-</div> 
-    {{knp_pagination_render(pagination)}}
 
-{% endblock %}
+    {% endblock %}

@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Repository\ArticleRepository;
 use App\Entity\Ticket;
 use App\Entity\Vendre;
 use App\Form\VendreType;
@@ -48,7 +47,9 @@ class VendresController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->persist($vendre);
             $entityManager->flush();
-    
+
+            $this->addFlash('success', 'Nouvelle ligne ajoutée !');
+
             return $this->redirectToRoute('app_vendres_index', ["numeroTicket" =>$numeroTicket], Response::HTTP_SEE_OTHER);
         }
     
@@ -76,6 +77,8 @@ class VendresController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
     
+            $this->addFlash('success', 'Ligne bien modifié !');
+
               // pour redirect, dans l'index vendre il me demande un numéro ticket
               // parce que je l'ai demandé dans mon action Index alors je dois le refourguer encore ici..
             return $this->redirectToRoute('app_vendres_index', ['numeroTicket' => $numeroTicket,'idArticle' =>$idArticle], Response::HTTP_SEE_OTHER);
@@ -95,6 +98,8 @@ class VendresController extends AbstractController
         if ($this->isCsrfTokenValid('delete' . $vendre->getIdArticle(), $request->request->get('_token'))) {
             $entityManager->remove($vendre);
             $entityManager->flush();
+            $this->addFlash('success', 'Ligne bien supprimée !');
+
         }
     
         return $this->redirectToRoute('app_vendres_index', ["numeroTicket" => $numeroTicket], Response::HTTP_SEE_OTHER);

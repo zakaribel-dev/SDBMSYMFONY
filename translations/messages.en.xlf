@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="YSHyAf3" resname="Bienvenue">
+        <source>Bienvenue</source>
+        <target>Welcome</target>
+      </trans-unit>
+      <trans-unit id="56H04IC" resname="C'est à l'aide du menu de la barre de navigation que vous pourrez manipuler votre stock de bières..">
+        <source>C'est à l'aide du menu de la barre de navigation que vous pourrez manipuler votre stock de bières..</source>
+        <target>Use the menu on top to navigate through your beer management</target>
+      </trans-unit>
+      <trans-unit id="LSWfCb9" resname="Langues">
+        <source>Langues</source>
+        <target>Languages</target>
+      </trans-unit>
+      <trans-unit id="m3S_vJE" resname="Mes belles bières">
+        <source>Mes belles bières</source>
+        <target>My beautiful beers</target>
+      </trans-unit>
+      <trans-unit id="UzFhc1Y" resname="Accueil">
+        <source>Accueil</source>
+        <target>Home</target>
+      </trans-unit>
+      <trans-unit id="GOVCPwm" resname="Qui suis-je ?">
+        <source>Qui suis-je ?</source>
+        <target>Who am I ?</target>
+      </trans-unit>
+      <trans-unit id="hFyAsEN" resname="NOUVEL ARTICLE">
+        <source>NOUVEL ARTICLE</source>
+        <target>NEW ARTICLE</target>
+      </trans-unit>
+      <trans-unit id="qJ7T56Q" resname="&lt;i&gt;Glissez le tableau vers la droite pour le voir en entier">
+        <source>&lt;i&gt;Glissez le tableau vers la droite pour le voir en entier</source>
+        <target><![CDATA[__<i>Scroll to the right to see the whole table]]></target>
+      </trans-unit>
+      <trans-unit id="BBJ_UEQ" resname="Code Article">
+        <source>Code Article</source>
+        <target>Article Code</target>
+      </trans-unit>
+      <trans-unit id="rJQ9a62" resname="Nom De l'Article">
+        <source>Nom De l'Article</source>
+        <target>Article Name</target>
+      </trans-unit>
+      <trans-unit id="NQ8IUQd" resname="Prix d'Achat">
+        <source>Prix d'Achat</source>
+        <target> Purchase Price </target>
+      </trans-unit>
+      <trans-unit id="sQ_5Ztc" resname="Volume">
+        <source>Volume</source>
+        <target>Volume</target>
+      </trans-unit>
+      <trans-unit id="VBQWthX" resname="Titrage">
+        <source>Titrage</source>
+        <target>Alcohol Content</target>
+      </trans-unit>
+      <trans-unit id="RVByChh" resname="Couleur">
+        <source>Couleur</source>
+        <target>Color</target>
+      </trans-unit>
+      <trans-unit id="7ldFVIs" resname="Marque">
+        <source>Marque</source>
+        <target>Brand</target>
+      </trans-unit>
+      <trans-unit id="XVDJVUw" resname="Enregistrer modification(s)">
+        <source>Enregistrer modification(s)</source>
+        <target>Save modification(s)</target>
+      </trans-unit>
+      <trans-unit id="5f4dBzl" resname="Retour aux articles">
+        <source>Retour aux articles</source>
+        <target>Back to articles</target>
+      </trans-unit>
+      <trans-unit id="0YvF3qR" resname="Modifier l'article">
+        <source>Modifier l'article</source>
+        <target>Edit article</target>
+      </trans-unit>
+      <trans-unit id="6ryOQmG" resname="Supprimer cet article">
+        <source>Supprimer cet article</source>
+        <target>Delete article</target>
+      </trans-unit>
+      <trans-unit id="_WtF8Tu" resname="Nom de l'article">
+        <source>Nom de l'article</source>
+        <target>Article name</target>
+      </trans-unit>
+      <trans-unit id="ZBbbbF2" resname="Prix d'achat">
+        <source>Prix d'achat</source>
+        <target>Purchase Price</target>
+      </trans-unit>
+      <trans-unit id="ImHKAaW" resname="non renseigné">
+        <source>non renseigné</source>
+        <target>not specified</target>
+      </trans-unit>
+      <trans-unit id="qIOz6RE" resname="Nom Article">
+        <source>Nom Article</source>
+        <target>Article Name</target>
+      </trans-unit>
+      <trans-unit id="AB4kLUG" resname="Prix Achat">
+        <source>Prix Achat</source>
+        <target>Purchase Price</target>
+      </trans-unit>
+      <trans-unit id="uq3fcPt" resname="Type">
+        <source>Type</source>
+        <target>Type</target>
+      </trans-unit>
+      <trans-unit id="kO2tJ5W" resname="Modifier cet article">
+        <source>Modifier cet article</source>
+        <target>Edit article</target>
+      </trans-unit>
+      <trans-unit id="HHAw7.x" resname="Retour vers articles">
+        <source>Retour vers articles</source>
+        <target>Back to articles</target>
+      </trans-unit>
+      <trans-unit id="ClLktkm" resname="Créer un nouvel article">
+        <source>Créer un nouvel article</source>
+        <target>Create new article</target>
+      </trans-unit>
+      <trans-unit id="cdx0hz4" resname="Enregistrer">
+        <source>Enregistrer</source>
+        <target>Save</target>
+      </trans-unit>
+      <trans-unit id="FfhEcIe" resname="Attention vous ne pourrez pas revenir en arrière!">
+        <source>Attention vous ne pourrez pas revenir en arrière!</source>
+        <target>Careful because you cannot undo this !</target>
+      </trans-unit>
+      <trans-unit id="AJvRlnK" resname="Vous êtes sûr ?">
+        <source>Vous êtes sûr ?</source>
+        <target>Are you sure ?</target>
+      </trans-unit>
+      <trans-unit id="L.4J4cx" resname="Oui, supprimer!">
+        <source>Oui, supprimer!</source>
+        <target>Yes, delete !</target>
+      </trans-unit>
+      <trans-unit id="Rq05Fva" resname="Annuler">
+        <source>Annuler</source>
+        <target>Cancel</target>
+      </trans-unit>
+      <trans-unit id="cMglXpw" resname="Article bien ajouté !">
+        <source>Article bien ajouté !</source>
+        <target>Article successfully added !</target>
+      </trans-unit>
+      <trans-unit id="Xzo5Rnv" resname="Article bien modifié !">
+        <source>Article bien modifié !</source>
+        <target>Articled successfully edited !</target>
+      </trans-unit>
+      <trans-unit id="3Xj8sji" resname="Article bien supprimé !">
+        <source>Article bien supprimé !</source>
+        <target>Article successfully deleted !</target>
+      </trans-unit>
+      <trans-unit id="C0HwC3S" resname="NOUVEAU TICKET">
+        <source>NOUVEAU TICKET</source>
+        <target>NEW TICKET</target>
+      </trans-unit>
+      <trans-unit id="s2BIFax" resname="Annee">
+        <source>Annee</source>
+        <target>Year</target>
+      </trans-unit>
+      <trans-unit id="V0uInML" resname="Numero De Ticket">
+        <source>Numero De Ticket</source>
+        <target>Ticket number</target>
+      </trans-unit>
+      <trans-unit id="e.6s8.9" resname="Date Edition">
+        <source>Date Edition</source>
+        <target>Date created</target>
+      </trans-unit>
+      <trans-unit id="hL9_qe8" resname="Voir détails">
+        <source>Voir détails</source>
+        <target>See details</target>
+      </trans-unit>
+      <trans-unit id="B5eSJbg" resname="Retour aux tickets">
+        <source>Retour aux tickets</source>
+        <target>Back to tickets</target>
+      </trans-unit>
+      <trans-unit id="Nk4VZ.8" resname="Nouveau ticket">
+        <source>Nouveau ticket</source>
+        <target>New ticket</target>
+      </trans-unit>
+      <trans-unit id="d7bqyNC" resname="Numero Ticket">
+        <source>Numero Ticket</source>
+        <target>Ticket number</target>
+      </trans-unit>
+      <trans-unit id="BBPELui" resname="Date Vente">
+        <source>Date Vente</source>
+        <target>Date created</target>
+      </trans-unit>
+      <trans-unit id="uKL5BNL" resname="Supprimer ce ticket">
+        <source>Supprimer ce ticket</source>
+        <target>Delete ticket</target>
+      </trans-unit>
+      <trans-unit id="u8NEFmT" resname="Modifier ticket">
+        <source>Modifier ticket</source>
+        <target>Edit ticket</target>
+      </trans-unit>
+      <trans-unit id="GzCq9g6" resname="Enregistrer modification">
+        <source>Enregistrer modification</source>
+        <target>Save</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -4,41 +4,44 @@
 
 {% block body %}
     <h1 class="display-4">Tickets</h1>
-<br>
+    <br>
 
-<a class="new" role="button" href="{{ path('app_tickets_new') }}">NOUVEAU TICKET</a>
-</button> 
-<br>
-<br>
-    <div class="container"> 
-    <table class="table_tickets">
-        <thead>
-            <tr>
-                <th class="th_left">Annee</th>
-                <th>Numero De Ticket</th>
-                <th>Date Edition </th>
-                <th class="th_right">Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for ticket in tickets %}
-            <tr>
-                <td>{{ ticket.annee }}</td>
-                <td>{{ ticket.numeroTicket }}</td>
-                <td>{{ ticket.dateVente ? ticket.dateVente|date('d/m à H:i:s') : '' }}</td>
-                <td>
-<a role="button" href="{{ path('app_tickets_show', {'annee': ticket.annee}) }}"><i class="fa-solid fa-magnifying-glass show"></i></a>
-<a role="button" href="{{ path('app_tickets_edit', {'numeroTicket': ticket.numeroTicket}) }}"><i class="fa-regular fa-pen-to-square edit"></i></a>
-<a role="button" href="{{ path('app_vendres_index', {'numeroTicket': ticket.numeroTicket}) }}" style="color:#170746;">Voir détails</a>
-
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="4">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-    <div> 
+    <a class="new" role="button" href="{{ path('app_tickets_new') }}">{% trans %}NOUVEAU TICKET{% endtrans %}</a>
+    <br><br>
+    <div class="container">
+  
+        {{ knp_pagination_render(pagination) }}
+     
+        <div class="table-responsive">
+            <table class="table-with-effect table_tickets">
+                <thead>
+                    <tr>
+                        <th class="th_left">{% trans %}Annee{% endtrans %}</th>
+                        <th>{% trans %}Numero De Ticket{% endtrans %}</th>
+                        <th>{% trans %}Date Edition{% endtrans %} </th>
+                        <th class="th_right">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ticket in pagination %}
+                        <tr>
+                            <td>{{ ticket.annee }}</td>
+                            <td>{{ ticket.numeroTicket }}</td>
+                            <td>{{ ticket.dateVente ? ticket.dateVente|date('d/m à H:i:s') : '' }}</td>
+                            <td>
+                                <a role="button" href="{{ path('app_tickets_show', {'annee': ticket.annee}) }}"><i class="fa-solid fa-magnifying-glass show_button"></i></a>
+                                <a role="button" href="{{ path('app_tickets_edit', {'annee': ticket.annee, 'numeroTicket': ticket.numeroTicket}) }}"><i class="fa-regular fa-pen-to-square edit_button"></i></a>
+                                <a role="button" href="{{ path('app_vendres_index', {'numeroTicket': ticket.numeroTicket}) }}" style="color:#170746;">{% trans %}Voir détails{% endtrans %}</a>
+                            </td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="4">no records found</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 {% endblock %}

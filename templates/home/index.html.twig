@@ -1,15 +1,28 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Mes belles bières{% endblock %}
+{% block title %} Mes belles bières{% endblock %}
 
 {% block body %}
 <br><br><br>
     <div class="container mt-5">
         <div class="h-100 p-5 text-white rounded-3 jumbo">
-            <h1 class="display-4">Bienvenue</h1>
-            <p class="lead">C'est à l'aide du menu de la barre de navigation que vous pourrez manipuler votre stock de bières..</p>
+
+           <h1 class="display-4">
+           
+           {% trans %}
+           Bienvenue
+           {% endtrans %}
+           </h1>
+
+            <p class="lead">
+            {% trans %}
+            C'est à l'aide du menu de la barre de navigation que vous pourrez manipuler votre stock de bières..
+            {% endtrans %}
+            </p>
+
             <hr class="my-4">
-            <a class="btn btn-light" href="https://zakaribel.com" target='_blank' role="button">Qui suis-je ?</a>
+
+            <a class="btn btn-light" href="https://zakaribel.com" target='_blank' role="button">{% trans %}Qui suis-je ?{% endtrans %}</a>
         </div>
     </div>
 

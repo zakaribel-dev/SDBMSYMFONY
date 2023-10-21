@@ -4,9 +4,9 @@
 
 {% block body %}
 <br>
-    <a class="new" href="{{ path('app_article_index') }}">Retour aux articles</a> 
+    <a class="new" href="{{ path('app_article_index') }}">{% trans %}Retour aux articles{% endtrans %}</a> 
 
-    <h1>Créer un nouvel article</h1>
+    <h1>{% trans %}Créer un nouvel article{% endtrans %}</h1>
 
     {{ include('article/_form.html.twig') }} <br>
 {% endblock %}
