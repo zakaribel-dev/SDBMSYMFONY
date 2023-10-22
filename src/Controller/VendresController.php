@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 #[Route('/vendres')]
 class VendresController extends AbstractController
@@ -30,27 +31,35 @@ class VendresController extends AbstractController
     }
 
     #[Route('/new/{numeroTicket}', name: 'app_vendres_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, EntityManagerInterface $entityManager, $numeroTicket): Response
-    {
-
+    public function new(
+        Request $request,
+        EntityManagerInterface $entityManager,
+        $numeroTicket,
+        TranslatorInterface $translator
+    ): Response {
         $ticket = $entityManager->getRepository(Ticket::class)->findOneBy(['numeroTicket' => $numeroTicket]);
-
+    
         $vendre = new Vendre();
         $vendre->setTicket($ticket);
-
+    
         $form = $this->createForm(VendreType::class, $vendre, [
             'entityManager' => $entityManager,
         ]);
-
+    
         $form->handleRequest($request);
     
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager->persist($vendre);
-            $entityManager->flush();
-
-            $this->addFlash('success', 'Nouvelle ligne ajoutée !');
-
-            return $this->redirectToRoute('app_vendres_index', ["numeroTicket" =>$numeroTicket], Response::HTTP_SEE_OTHER);
+        try {
+            if ($form->isSubmitted() && $form->isValid()) {
+                $entityManager->persist($vendre);
+                $entityManager->flush();
+    
+                $this->addFlash('success', $translator->trans('Nouvelle ligne ajoutée !'));
+                return $this->redirectToRoute('app_vendres_index', ["numeroTicket" => $numeroTicket], Response::HTTP_SEE_OTHER);
+            }
+        } catch (\Exception $e) { 
+       
+          $this->addFlash('error', $translator->trans('Désolé cet article est déjà présent dans le ticket.'));
+            
         }
     
         return $this->render('vendres/new.html.twig', [
@@ -61,7 +70,8 @@ class VendresController extends AbstractController
     }
 
     #[Route('{numeroTicket}/{prix}/{qte}/{idArticle}/edit', name: 'app_vendres_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Vendre $vendre, EntityManagerInterface $entityManager, $prix, $qte, $numeroTicket,$idArticle): Response
+    public function edit(Request $request, Vendre $vendre, EntityManagerInterface $entityManager,
+     $prix, $qte, $numeroTicket,$idArticle,TranslatorInterface $translator): Response
     {
         $vendre->setPrixVente($prix);
         $vendre->setQuantite($qte);
@@ -77,7 +87,7 @@ class VendresController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
     
-            $this->addFlash('success', 'Ligne bien modifié !');
+            $this->addFlash('success', $translator->trans('Ligne bien modifié !'));
 
               // pour redirect, dans l'index vendre il me demande un numéro ticket
               // parce que je l'ai demandé dans mon action Index alors je dois le refourguer encore ici..
@@ -93,12 +103,13 @@ class VendresController extends AbstractController
     }
 
     #[Route('/{idArticle}/{numeroTicket}', name: 'app_vendres_delete', methods: ['POST'])]
-    public function delete(Request $request, Vendre $vendre, EntityManagerInterface $entityManager, $numeroTicket): Response
+    public function delete(Request $request, Vendre $vendre, EntityManagerInterface $entityManager, $numeroTicket,
+    TranslatorInterface $translator): Response
     {
         if ($this->isCsrfTokenValid('delete' . $vendre->getIdArticle(), $request->request->get('_token'))) {
             $entityManager->remove($vendre);
             $entityManager->flush();
-            $this->addFlash('success', 'Ligne bien supprimée !');
+            $this->addFlash('success', $translator->trans('Ligne bien supprimée !'));
 
         }
     

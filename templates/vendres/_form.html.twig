@@ -1,8 +1,16 @@
-
  <br>
- <a class="new" href="{{ path('app_vendres_index', {'numeroTicket': numeroTicket}) }}">Retour</a> <br> <br>
+ <a class="new" href="{{ path('app_vendres_index', {'numeroTicket': numeroTicket}) }}">{% trans %}Retour{% endtrans %}</a> <br> <br>
 {{ form_start(form) }}
-    {{ form_widget(form) }}
+
+ <div class="form-group">
+        {{ form_row(form.article, {'attr': {'class': 'form-control'}, 'label': 'Nom de l\'article'|trans}) }}
+    </div>
+      <div class="form-group">
+        {{ form_row(form.quantite, {'attr': {'class': 'form-control'}, 'label': 'Quantité'|trans}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.prixVente, {'attr': {'class': 'form-control'}, 'label': 'Prix de vente'|trans}) }} 
+    </div>
     <br>
-    <button class="btn btn-primary">{{ button_label|default('Enregistrer') }}</button>
+    <button class="btn btn-primary">{{ button_label|default('Enregistrer') |trans }}</button>
 {{ form_end(form) }}

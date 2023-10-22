@@ -98,7 +98,7 @@ class ArticleController extends AbstractController
                 $this->addFlash('success', $translator->trans('Article bien supprimé !'));
             }
         } catch (\Exception $e) {
-            $this->addFlash('error', 'Impossible de supprimer l\'article. Assurez-vous qu\'il n\'est pas lié à d\'autres données.');
+            $this->addFlash('error', $translator->trans('Impossible de supprimer l\'article. Assurez-vous qu\'il n\'est pas lié à d\'autres données.'));
         }
     
         return $this->redirectToRoute('app_article_index', [], Response::HTTP_SEE_OTHER);

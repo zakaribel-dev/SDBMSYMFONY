@@ -1,20 +1,20 @@
 <form method="post" id="deleteForm" action="{{ path('app_vendres_delete', {'idArticle': vendre.idArticle, 'numeroTicket' : numeroTicket}) }}"  onsubmit="return confirmDelete();">
     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ vendre.idArticle) }}">
     <br>
-    <button class="btn btn-danger">Supprimer cette ligne</button>
+    <button class="btn btn-danger">{% trans %}Supprimer cette ligne{% endtrans %}</button>
 </form>
 
 <script>
     function confirmDelete() {
         Swal.fire({
-            title: 'Êtes-vous sûr?',
-            text: "Vous ne pourrez pas revenir en arrière !!",
+            title: "{{'Vous êtes sûr ?'|trans}}",
+            text: "{{ 'Attention vous ne pourrez pas revenir en arrière!'|trans }}",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#d33',
             cancelButtonColor: '#3085d6',
-            confirmButtonText: 'Oui, supprimer!',
-            cancelButtonText: 'Annuler'
+            confirmButtonText: "{{'Oui, supprimer!'|trans}}",
+            cancelButtonText: "{{'Annuler'|trans}}"
         }).then((result) => {
             if (result.isConfirmed) {
                 document.getElementById('deleteForm').submit();

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ path('app_home') }}">
-            {% trans %}Mes belles bières {% endtrans %}<i class="fa-solid fa-beer-mug-empty fa-bounce" style="color: #ffffff;"></i>
+            {% trans %}Ma belle bière {% endtrans %} <i class="fa-solid fa-beer-mug-empty fa-bounce" style="color: #ffffff;"></i>
         </a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,7 +17,7 @@
                     <a class="nav-link" href="{{ path('app_article_index') }}">Articles</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_tickets_index') }}">Tickets</a>
+                    <a class="nav-link" href="{{ path('app_tickets_index') }}">{% trans %}Tickets{% endtrans %}</a>
                 </li>
                 
                 <li class="nav-item dropdown">

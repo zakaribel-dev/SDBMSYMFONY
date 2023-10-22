@@ -2,24 +2,24 @@
 
 {% block body %}
 <br>
-    <a class="new" href="{{ path('app_vendres_index', {'numeroTicket': numeroTicket}) }}">Retour</a>
+    <a class="new" href="{{ path('app_vendres_index', {'numeroTicket': numeroTicket}) }}">{% trans %}Retour{% endtrans %}</a>
 
-    <h1>Créer une nouvelle ligne dans le ticket</h1>
+    <h1>{% trans %}Créer une nouvelle ligne dans le ticket{% endtrans %}</h1>
 
    
 {{ form_start(form) }}
     <div class="form-group">
-        {{ form_row(form.article, {'attr': {'class': 'form-control'}}) }}
+    {{ form_row(form.article, {'attr': {'class': 'form-control'}, 'label': 'Article'|trans, 'placeholder': 'Sélectionnez'|trans}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.quantite, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.quantite, {'attr': {'class': 'form-control'}, 'label': 'Quantité'|trans}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.prixVente, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.prixVente, {'attr': {'class': 'form-control'}, 'label': 'Prix de vente'|trans}) }}
     </div>
    <br>
     <div class="form-group">
-        <button class="btn btn-primary">{{ button_label|default('Enregistrer') }}</button>
+        <button class="btn btn-primary">{{ button_label|default('Enregistrer') |trans }}</button>
     </div>
 {{ form_end(form) }}
 

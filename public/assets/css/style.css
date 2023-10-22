@@ -39,10 +39,11 @@ body {
   border-radius: 7px;
   background-color: #170746;
   margin: 5px;
-  padding: 3px;
+  padding: 5px;
   color: #b0abbe;
   font-size: medium;
 }
+
 
 .current {
   color: #170746;
@@ -123,7 +124,6 @@ table {
 }
 .vente_table {
   margin-left: 27%;
-  margin-bottom: 5%;
 }
 th,
 tr {
@@ -133,10 +133,14 @@ tr {
 
 th,
 td {
-  padding: 9px;
+  padding: 2px;
   width: 100px;
   box-sizing: border-box;
 }
+.table_tickets td{
+ padding: 4px;
+}
+
 
 th {
   color: white;
@@ -337,43 +341,17 @@ footer {
   border-radius: 0 0 30px 30px;
   margin: 96px 119px;
 }
-.beer::before {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 55px;
-  border-radius: 100%;
-  border-right: 9px solid #fb8705;
-  margin: 40px 107px;
-}
+
 .beer3 {
   position: absolute;
-  width: 142px;
-  height: 152px;
+  width: 127px;
+  height: 162px;
   border: 7px solid black;
   border-radius: 0 0 35px 30px;
-  margin: 90px 102px;
+  margin: 91px 112px;
 }
-.beer3::before {
-  content: "";
-  position: absolute;
-  width: 55px;
-  height: 55px;
-  border-radius: 100%;
-  border: 7px solid black;
-  transform: rotate(90deg);
-  margin: 30px 112px;
-}
-.beer3::after {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 25px;
-  border-radius: 50px 50px 0 0;
-  border: 7px solid black;
-  transform: rotate(90deg);
-  margin: 45px 117px;
-}
+
+
 .ojos,
 .ojos3 {
   position: absolute;

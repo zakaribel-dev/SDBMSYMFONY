@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Ticket{% endblock %}
+{% block title %}{% trans %}Ticket{% endtrans %}{% endblock %}
 
 {% block body %}
 <br>
     <a class="new" href="{{ path('app_tickets_index') }}">{% trans %}Retour aux tickets{% endtrans %}</a>
 
-    <h1>Ticket</h1>
+    <h1>{% trans %}Ticket{% endtrans %}</h1>
     <div class="container">
     <table class="showTicket">
         <tbody>

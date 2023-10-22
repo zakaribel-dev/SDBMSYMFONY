@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Modifiez la ligne{% endblock %}
+{% block title %}{% trans %}Modifiez la ligne{% endtrans %}{% endblock %}
 
 {% block body %}
-    <h1>Modifiez la ligne</h1>
+    <h1>{% trans %}Modifiez la ligne{% endtrans %}</h1>
 
 
     {{ include('vendres/_form.html.twig', {'button_label': 'Enregistrer'}) }}

@@ -17,9 +17,9 @@
         <source>Langues</source>
         <target>Languages</target>
       </trans-unit>
-      <trans-unit id="m3S_vJE" resname="Mes belles bières">
-        <source>Mes belles bières</source>
-        <target>My beautiful beers</target>
+      <trans-unit id="m3S_vJE" resname="Ma belle bière">
+        <source>Ma belle bière</source>
+        <target>My beautiful beer</target>
       </trans-unit>
       <trans-unit id="UzFhc1Y" resname="Accueil">
         <source>Accueil</source>
@@ -151,7 +151,7 @@
       </trans-unit>
       <trans-unit id="C0HwC3S" resname="NOUVEAU TICKET">
         <source>NOUVEAU TICKET</source>
-        <target>NEW TICKET</target>
+        <target>NEW RECEIPT</target>
       </trans-unit>
       <trans-unit id="s2BIFax" resname="Annee">
         <source>Annee</source>
@@ -159,7 +159,7 @@
       </trans-unit>
       <trans-unit id="V0uInML" resname="Numero De Ticket">
         <source>Numero De Ticket</source>
-        <target>Ticket number</target>
+        <target>Receipt number</target>
       </trans-unit>
       <trans-unit id="e.6s8.9" resname="Date Edition">
         <source>Date Edition</source>
@@ -171,15 +171,15 @@
       </trans-unit>
       <trans-unit id="B5eSJbg" resname="Retour aux tickets">
         <source>Retour aux tickets</source>
-        <target>Back to tickets</target>
+        <target>Back to receipts</target>
       </trans-unit>
       <trans-unit id="Nk4VZ.8" resname="Nouveau ticket">
         <source>Nouveau ticket</source>
-        <target>New ticket</target>
+        <target>New receipt</target>
       </trans-unit>
       <trans-unit id="d7bqyNC" resname="Numero Ticket">
         <source>Numero Ticket</source>
-        <target>Ticket number</target>
+        <target>Receipt number</target>
       </trans-unit>
       <trans-unit id="BBPELui" resname="Date Vente">
         <source>Date Vente</source>
@@ -187,16 +187,105 @@
       </trans-unit>
       <trans-unit id="uKL5BNL" resname="Supprimer ce ticket">
         <source>Supprimer ce ticket</source>
-        <target>Delete ticket</target>
+        <target>Delete receipt</target>
       </trans-unit>
       <trans-unit id="u8NEFmT" resname="Modifier ticket">
         <source>Modifier ticket</source>
-        <target>Edit ticket</target>
+        <target>Edit receipt</target>
       </trans-unit>
       <trans-unit id="GzCq9g6" resname="Enregistrer modification">
         <source>Enregistrer modification</source>
         <target>Save</target>
       </trans-unit>
+      <trans-unit id="F_ruSJs" resname="Détails">
+        <source>Détails</source>
+        <target>Details</target>
+      </trans-unit>
+      <trans-unit id="r2IeAiT" resname="Retour vers la liste des tickets">
+        <source>Retour vers la liste des tickets</source>
+        <target>Back to receipts list</target>
+      </trans-unit>
+      <trans-unit id="pxTWVwU" resname="NOUVELLE LIGNE">
+        <source>NOUVELLE LIGNE</source>
+        <target>New entry</target>
+      </trans-unit>
+      <trans-unit id="DFyF_zc" resname="ID de l'article">
+        <source>ID de l'article</source>
+        <target>Article ID</target>
+      </trans-unit>
+      <trans-unit id="olio7wM" resname="Quantité">
+        <source>Quantité</source>
+        <target>Quantity</target>
+      </trans-unit>
+      <trans-unit id="I68et2Y" resname="Prix de vente">
+        <source>Prix de vente</source>
+        <target>Price</target>
+      </trans-unit>
+      <trans-unit id="fYBHyNQ" resname="Sous-total">
+        <source>Sous-total</source>
+        <target>Subtotal</target>
+      </trans-unit>
+      <trans-unit id="y2wft2x" resname="Non renseigné">
+        <source>Non renseigné</source>
+        <target>Not specified</target>
+      </trans-unit>
+      <trans-unit id="j.rQ27J" resname="TOTAL DU TICKET">
+        <source>TOTAL DU TICKET</source>
+        <target>TOTAL DUE</target>
+      </trans-unit>
+      <trans-unit id="RyxBb80" resname="Glissez le tableau vers la droite pour le voir en entier">
+        <source>Glissez le tableau vers la droite pour le voir en entier</source>
+        <target><![CDATA[__<i>Scroll to the right to see the whole table]]></target>
+      </trans-unit>
+      <trans-unit id="7yOllAJ" resname="Retour">
+        <source>Retour</source>
+        <target>Go Back</target>
+      </trans-unit>
+      <trans-unit id="xnKsKjc" resname="Créer une nouvelle ligne dans le ticket">
+        <source>Créer une nouvelle ligne dans le ticket</source>
+        <target>Add a new line to the receipt</target>
+      </trans-unit>
+      <trans-unit id="oSUu1Lu" resname="Sélectionnez">
+        <source>Sélectionnez</source>
+        <target>Select</target>
+      </trans-unit>
+      <trans-unit id="PRMTaLQ" resname="Tickets">
+        <source>Tickets</source>
+        <target>Receipts</target>
+      </trans-unit>
+      <trans-unit id="5zM6VWc" resname="Modifiez la ligne">
+        <source>Modifiez la ligne</source>
+        <target>Edit entry</target>
+      </trans-unit>
+      <trans-unit id=".xqrpHV" resname="Supprimer cette ligne">
+        <source>Supprimer cette ligne</source>
+        <target>Delete this entry</target>
+      </trans-unit>
+      <trans-unit id="dp_fwRc" resname="Nouvelle ligne ajoutée !">
+        <source>Nouvelle ligne ajoutée !</source>
+        <target>New entry successfully added in the receipt !</target>
+      </trans-unit>
+      <trans-unit id="wD_fQ3W" resname="Ligne bien modifié !">
+        <source>Ligne bien modifié !</source>
+        <target>Entry successfully edited !</target>
+      </trans-unit>
+      <trans-unit id="DupI5dm" resname="Ligne bien supprimée !">
+        <source>Ligne bien supprimée !</source>
+        <target>Entry successfully deleted !</target>
+      </trans-unit>
+      <trans-unit id="EHAb3Sf" resname="Désolé cet article est déjà présent dans le ticket.">
+        <source>Désolé cet article est déjà présent dans le ticket.</source>
+        <target>Sorry that entry already exists in the receipt.</target>
+      </trans-unit>
+      <trans-unit id="VnqLX49" resname="Ticket">
+        <source>Ticket</source>
+        <target>Receipt</target>
+      </trans-unit>
+      <trans-unit id="LamGqcg" resname="Impossible de supprimer l'article. Assurez-vous qu'il n'est pas lié à d'autres données.">
+        <source>Impossible de supprimer l'article. Assurez-vous qu'il n'est pas lié à d'autres données.</source>
+        <target>Cannot delete that article because it is most likely used by a receipt</target>
+      </trans-unit>
+
     </body>
   </file>
 </xliff>
