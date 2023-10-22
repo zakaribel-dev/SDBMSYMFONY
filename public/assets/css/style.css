@@ -191,6 +191,7 @@ tbody tr.active-row {
   border-radius: 0 10px 0 0;
 }
 
+
 .new {
   background-color: #170746;
   text-decoration: none;
@@ -219,9 +220,17 @@ footer {
   margin-top: 1%;
 }
 
+img{
+  width: 20px;
+}
+
+.uk{
+  width: 30px;
+}
+
 .form-control {
   width: 180px;
-  margin-left: 45%;
+  margin-left: 44%;
 }
 
 .showArticle {
@@ -322,6 +331,9 @@ footer {
   .beer30-article {
     display: none;
   }
+  .beer30-vente {
+    display: none;
+  }
   .beer30-show{
     display: none;
   }
@@ -334,6 +346,7 @@ footer {
   .table_tickets {
     margin-top: 4%;
   }
+
 }
 
 /* pc portable et bureau */
@@ -342,6 +355,35 @@ footer {
 
 /* Tablettes */
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+  .beer30{
+    display: none;
+  }
+  .beer30-article{
+    display: none;
+  }
+  .beer30-edit{
+    display: none;
+  }
+
+  .beer30-show{
+    display: none;
+  }
+
+  .beer30-ticket{
+    display: none;
+  }
+
+  .beer30-vente{
+    display: none;
+  }
+
+  .new{
+    margin-left: 7%;
+  }
+  .msgMobile{
+    display: block;
+  }
 }
 
 .beer30 {
@@ -351,21 +393,22 @@ footer {
   margin-top: 8%;
   animation: volar 7s alternate infinite;
 }
-.beer30-article {
-  position: absolute;
-  transform: rotate(-21deg) scale(0.9);
-  margin-left: 8%;
-  margin-top: 3%;
-  animation: volar 7s alternate infinite;
-}
 
 .beer30-ticket {
   position: absolute;
   transform: rotate(-21deg) scale(0.9);
   margin-left: 13%;
-  margin-top: 25%;
+  margin-top: 10%;
   animation: volar 7s alternate infinite;
 }
+.beer30-article {
+  position: absolute;
+  transform: rotate(-21deg) scale(0.9);
+  margin-left: 3%;
+  margin-top: 4%;
+  animation: volar 7s alternate infinite;
+}
+
 
 .beer30-show {
   position: absolute;
@@ -386,9 +429,13 @@ footer {
 .beer30-vente {
   position: absolute;
   transform: rotate(-21deg) scale(0.9);
-  margin-left: 62%;
+  margin-left: 64%;
   margin-top: 24%;
   animation: volar 7s alternate infinite;
+}
+
+.total{
+  text-decoration: underline;
 }
 
 .beer {

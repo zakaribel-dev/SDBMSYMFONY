@@ -29,7 +29,6 @@
   </div>
   </div>
 <a class="new" role="button" href="{{ path('app_vendres_new', {'numeroTicket': numeroTicket}) }}">{% trans %}NOUVELLE LIGNE{% endtrans %}</a>
-
 <br> <br>
 <div class="container">
         <div class="table-responsive">
@@ -69,8 +68,9 @@
         </tbody>
         
     <div class="msgMobile"><i>{% trans %}Glissez le tableau vers la droite pour le voir en entier{% endtrans %} <i class="fa-solid fa-arrow-right"></i></div>
+    <h3><i> {% trans %}TOTAL DU TICKET{% endtrans %} : <span class="total">{{ total }} €</span> </h3>
     </table>
- <h1><i> {% trans %}TOTAL DU TICKET{% endtrans %} : {{ total }} €</i> </h1><br>
+
     </div>
                    
 
