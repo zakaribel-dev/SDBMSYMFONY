@@ -17,7 +17,7 @@
         <source>Langues</source>
         <target>Languages</target>
       </trans-unit>
-      <trans-unit id="m3S_vJE" resname="Ma belle bière">
+      <trans-unit id="vpGvZdh" resname="Ma belle bière">
         <source>Ma belle bière</source>
         <target>My beautiful beer</target>
       </trans-unit>
@@ -157,7 +157,7 @@
         <source>Annee</source>
         <target>Year</target>
       </trans-unit>
-      <trans-unit id="V0uInML" resname="Numero Ticket">
+      <trans-unit id="d7bqyNC" resname="Numero Ticket">
         <source>Numero Ticket</source>
         <target>Receipt number</target>
       </trans-unit>
@@ -176,10 +176,6 @@
       <trans-unit id="Nk4VZ.8" resname="Nouveau ticket">
         <source>Nouveau ticket</source>
         <target>New receipt</target>
-      </trans-unit>
-      <trans-unit id="d7bqyNC" resname="Numero Ticket">
-        <source>Numero Ticket</source>
-        <target>Receipt number</target>
       </trans-unit>
       <trans-unit id="BBPELui" resname="Date Vente">
         <source>Date Vente</source>
@@ -285,7 +281,10 @@
         <source>Impossible de supprimer l'article. Assurez-vous qu'il n'est pas lié à d'autres données.</source>
         <target>Cannot delete that article because it is most likely used by a receipt</target>
       </trans-unit>
-
+      <trans-unit id="KdlJIlE" resname="Article">
+        <source>Article</source>
+        <target>__Article</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

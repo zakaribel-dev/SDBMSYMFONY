@@ -1,7 +1,7 @@
 <form method="post" action="{{ path('app_tickets_delete', {'annee': ticket.annee, 'numeroTicket': ticket.numeroTicket}) }}" id="deleteForm" onsubmit="return confirmDelete();">
     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ ticket.annee) }}">
-    <br>
-    <button class="btn btn-danger">{% trans %}Supprimer ce ticket{% endtrans %}</button>
+ 
+    <button class="btn btn-danger deleteUp">{% trans %}Supprimer ce ticket{% endtrans %}</button>
 </form>
 
 <script>
