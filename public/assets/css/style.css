@@ -44,7 +44,6 @@ body {
   font-size: medium;
 }
 
-
 .current {
   color: #170746;
   font-size: 18px;
@@ -137,16 +136,16 @@ td {
   width: 100px;
   box-sizing: border-box;
 }
-.table_tickets td{
- padding: 4px;
+.table_tickets td {
+  padding: 4px;
 }
-
 
 th {
   color: white;
   background-color: #170746;
   font-size: 15px;
-  height: 85px;
+  height: 80px;
+  padding: 20px;
 }
 
 td:first-child,
@@ -300,6 +299,22 @@ footer {
   .showTicket {
     margin-left: 20%;
   }
+
+  .beer30-ticket {
+    display: none;
+  }
+  .beer30 {
+    display: none;
+  }
+  .beer30-article {
+    display: none;
+  }
+ .table_tickets td{
+  padding: 9px;
+ }
+ .table_tickets{
+  margin-top: 4%;
+ }
 }
 
 /* pc portable et bureau */
@@ -350,7 +365,6 @@ footer {
   border-radius: 0 0 35px 30px;
   margin: 91px 112px;
 }
-
 
 .ojos,
 .ojos3 {

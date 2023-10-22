@@ -35,7 +35,7 @@
       </trans-unit>
       <trans-unit id="qJ7T56Q" resname="&lt;i&gt;Glissez le tableau vers la droite pour le voir en entier">
         <source>&lt;i&gt;Glissez le tableau vers la droite pour le voir en entier</source>
-        <target><![CDATA[__<i>Scroll to the right to see the whole table]]></target>
+        <target><![CDATA[<i>Scroll to the right to see the whole table]]></target>
       </trans-unit>
       <trans-unit id="BBJ_UEQ" resname="Code Article">
         <source>Code Article</source>
@@ -157,8 +157,8 @@
         <source>Annee</source>
         <target>Year</target>
       </trans-unit>
-      <trans-unit id="V0uInML" resname="Numero De Ticket">
-        <source>Numero De Ticket</source>
+      <trans-unit id="V0uInML" resname="Numero Ticket">
+        <source>Numero Ticket</source>
         <target>Receipt number</target>
       </trans-unit>
       <trans-unit id="e.6s8.9" resname="Date Edition">
@@ -235,7 +235,7 @@
       </trans-unit>
       <trans-unit id="RyxBb80" resname="Glissez le tableau vers la droite pour le voir en entier">
         <source>Glissez le tableau vers la droite pour le voir en entier</source>
-        <target><![CDATA[__<i>Scroll to the right to see the whole table]]></target>
+        <target><![CDATA[<i>Scroll to the right to see the whole table]]></target>
       </trans-unit>
       <trans-unit id="7yOllAJ" resname="Retour">
         <source>Retour</source>
