@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
+use Symfony\Component\Serializer\SerializerInterface;
 
 
 #[Route('/article')]
@@ -18,30 +19,31 @@ class ArticleController extends AbstractController
 {
 
     #[Route('/', name: 'app_article_index', methods: ['GET'])]
-    public function index(EntityManagerInterface $entityManager, Request $request, PaginatorInterface $paginator): Response
+    public function index(EntityManagerInterface $entityManager, Request $request, PaginatorInterface $paginator, SerializerInterface $serializer): Response
     {
         $articles = $entityManager
             ->getRepository(Article::class)
             ->findBy([], []);
-        // premier param de findby () ça va être ce que je select, deuxieme param c'est l'ordre et le troisieme la limite
-
 
         $pagination = $paginator->paginate(
             $articles,
-            $request->query->getInt('page', 1), // numéro de la page par défaut ca va etre 1
-            5  // nombre d'articles par page
+            $request->query->getInt('page', 1),
+            10
         );
-        
+
         $pagination->setCustomParameters(['addClass' => 'new']);
 
+        $jsonArticles = $serializer->serialize($articles, 'json');
+
         return $this->render('article/index.html.twig', [
-            'pagination' => $pagination //c'est pagination qui contient mes articles maintenant
+            'pagination' => $pagination,
+            'articles' => $jsonArticles,
         ]);
     }
 
 
     #[Route('/new', name: 'app_article_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, EntityManagerInterface $entityManager,TranslatorInterface $translator): Response
+    public function new(Request $request, EntityManagerInterface $entityManager, TranslatorInterface $translator): Response
     {
         $article = new Article();
         $form = $this->createForm(ArticleType::class, $article);
@@ -70,7 +72,7 @@ class ArticleController extends AbstractController
     }
 
     #[Route('/{idArticle}/edit', name: 'app_article_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Article $article, EntityManagerInterface $entityManager,TranslatorInterface $translator): Response
+    public function edit(Request $request, Article $article, EntityManagerInterface $entityManager, TranslatorInterface $translator): Response
     {
         $form = $this->createForm(ArticleType::class, $article);
         $form->handleRequest($request);
@@ -89,7 +91,7 @@ class ArticleController extends AbstractController
     }
 
     #[Route('/{idArticle}', name: 'app_article_delete', methods: ['POST'])]
-    public function delete(Request $request, Article $article, EntityManagerInterface $entityManager,TranslatorInterface $translator): Response
+    public function delete(Request $request, Article $article, EntityManagerInterface $entityManager, TranslatorInterface $translator): Response
     {
         try {
             if ($this->isCsrfTokenValid('delete' . $article->getIdArticle(), $request->request->get('_token'))) {
@@ -100,7 +102,7 @@ class ArticleController extends AbstractController
         } catch (\Exception $e) {
             $this->addFlash('error', $translator->trans('Impossible de supprimer l\'article. Assurez-vous qu\'il n\'est pas lié à d\'autres données.'));
         }
-    
+
         return $this->redirectToRoute('app_article_index', [], Response::HTTP_SEE_OTHER);
     }
 

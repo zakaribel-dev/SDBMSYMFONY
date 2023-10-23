@@ -25,6 +25,9 @@
     <div class="rastro"></div>
   </div>
   </div>
+       <div class="arrow-container-ticket">
+        <i class="fas fa-arrow-down fa-2x"></i>
+    </div>
     <h1>{% trans %}Tickets{% endtrans %}</h1>
     <br>
 
@@ -35,7 +38,7 @@
         {{ knp_pagination_render(pagination) }}
      
         <div class="table-responsive">
-            <table class="table-with-effect table_tickets">
+            <table class="table-with-effect table_tickets" id="tab_ticket">
                 <thead>
                     <tr>
                         <th class="th_left">{% trans %}Annee{% endtrans %}</th>
@@ -51,9 +54,8 @@
                             <td>{{ ticket.numeroTicket }}</td>
                             <td>{{ ticket.dateVente ? ticket.dateVente|date('d/m à H:i:s') : '' }}</td>
                             <td>
-                                <a role="button" href="{{ path('app_tickets_show', {'annee': ticket.annee}) }}"><i class="fa-solid fa-magnifying-glass show_button"></i></a>
-                                <a role="button" href="{{ path('app_tickets_edit', {'annee': ticket.annee, 'numeroTicket': ticket.numeroTicket}) }}"><i class="fa-regular fa-pen-to-square edit_button"></i></a>
-                                <a role="button" href="{{ path('app_vendres_index', {'numeroTicket': ticket.numeroTicket}) }}" style="color:#170746;">{% trans %}Voir détails{% endtrans %}</a>
+                                 <a role="button" title="Cliquez ici pour voir le ticket" href="{{ path('app_tickets_show', {'annee': ticket.annee}) }}"><i class="fa-solid fa-magnifying-glass show_button"></i></a>
+                                 <a role="button" title="Cliquez ici pour voir les détails" class="details" href="{{ path('app_vendres_index', {'numeroTicket': ticket.numeroTicket}) }}"><i class="fa-solid fa-receipt fa-2xl details_btn show_button"></i></a>
                             </td>
                         </tr>
                     {% else %}
@@ -63,6 +65,7 @@
                     {% endfor %}
                 </tbody>
             </table>
+            <div id="msg"></div>
         </div>
     </div>
 </div>

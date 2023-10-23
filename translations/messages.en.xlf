@@ -167,7 +167,7 @@
       </trans-unit>
       <trans-unit id="hL9_qe8" resname="Voir détails">
         <source>Voir détails</source>
-        <target>See details</target>
+        <target>Details</target>
       </trans-unit>
       <trans-unit id="B5eSJbg" resname="Retour aux tickets">
         <source>Retour aux tickets</source>
@@ -281,9 +281,13 @@
         <source>Impossible de supprimer l'article. Assurez-vous qu'il n'est pas lié à d'autres données.</source>
         <target>Cannot delete that article because it is most likely used by a receipt</target>
       </trans-unit>
-      <trans-unit id="KdlJIlE" resname="Article">
-        <source>Article</source>
-        <target>__Article</target>
+      <trans-unit id="sYBrpOU" resname="Recherche mot-clé">
+        <source>Recherche mot-clé</source>
+        <target>Search by keyword</target>
+      </trans-unit>
+      <trans-unit id="QQDoixr" resname="Date Edition ici">
+        <source>Date Edition ici</source>
+        <target>Edition date here</target>
       </trans-unit>
     </body>
   </file>

@@ -1,40 +1,61 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="{{ path('app_home') }}">
-            {% trans %}Ma belle bière {% endtrans %} <i class="fa-solid fa-beer-mug-empty fa-bounce" style="color: #ffffff;"></i>
-        </a>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_home') }}">{% trans %}Accueil{% endtrans %}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_article_index') }}">Articles</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_tickets_index') }}">{% trans %}Tickets{% endtrans %}</a>
-                </li>
-                
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" role="button" data-bs-toggle="dropdown">
-                        {% trans %}Langues{% endtrans %}
-                    </a>
-                    
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{ path('app_langue_francais') }}">
-                            Français <img src="{{ asset('assets/images/france.png') }}" alt="FR">
-                        </a>
-                        <a class="dropdown-item" href="{{ path('app_langue_anglais') }}">
-                           &nbsp;  English <img class="uk" src="{{ asset('assets/images/uk.png') }}" alt="EN">
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </div>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark p-1">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="{{ path('app_home') }}">
+			{% trans %}Ma belle bière
+			{% endtrans %}
+			<i class="fa-solid fa-beer-mug-empty fa-bounce" style="color: #ffffff;"></i>
+		</a>
+
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="{{ path('app_home') }}">{% trans %}Accueil{% endtrans %}</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ path('app_article_index') }}">Articles</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ path('app_tickets_index') }}">{% trans %}Tickets{% endtrans %}</a>
+				</li>
+
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbardrop" role="button" data-bs-toggle="dropdown">
+						{% if app.request.session.get('_locale') == 'en' %}
+							<img class="uk" src="{{ asset('assets/images/uk.png') }}" alt="EN">
+						{% else %}
+							<img src="{{ asset('assets/images/france.png') }}" alt="FR">
+						{% endif %}
+					</a>
+
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="{{ path('app_langue_francais') }}">
+							Français
+							<img src="{{ asset('assets/images/france.png') }}" alt="FR">
+						</a>
+						<a class="dropdown-item" href="{{ path('app_langue_anglais') }}">
+							&nbsp;  English
+							<img class="uk" src="{{ asset('assets/images/uk.png') }}" alt="EN">
+						</a>
+					</div>
+				</li>
+			</ul>
+			
+{% if app.request.attributes.get('_route') == 'app_article_index' %}
+    <div class="d-flex">
+        <input class="form-control" type="search" id="search" placeholder="{{ 'Recherche mot-clé'|trans }}" aria-label="Search">
     </div>
-</nav>
+{% elseif app.request.attributes.get('_route') == 'app_tickets_index' %}
+    <div class="d-flex">
+        <input class="form-control" type="search" id="search" placeholder="{{ 'Date Edition ici'|trans }}" aria-label="Search">
+    </div>
+{% endif %}
+
+	
+		</div>
+
+
+	</nav>

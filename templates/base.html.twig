@@ -52,31 +52,99 @@ Swal.fire({
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 {% block javascripts %}
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const arrowContainer = document.querySelector(".arrow-container");
-            const arrowDown = document.querySelector(".fa-arrow-down");
-            
-            if (arrowDown) {
-                arrowDown.classList.add("bounce");
-            }
+document.addEventListener("DOMContentLoaded", function () {
+    const arrowContainer = document.querySelector(".arrow-container");
+    const arrowContainerArticle = document.querySelector('.arrow-container-article');
+    const arrowContainerTicket = document.querySelector('.arrow-container-ticket');
+    const arrowDown = document.querySelector(".fa-arrow-down");
 
-            window.addEventListener("scroll", function () {
-                if (arrowContainer) {
-                    arrowContainer.style.display = "none";
-                }
-            });
+    if (arrowDown) {
+        arrowDown.classList.add("bounce");
+    }
 
-            const tableWithEffect = document.querySelector(".table-with-effect");
-            const pagination = document.querySelector(".pagination");
-            if (tableWithEffect) {
-                tableWithEffect.classList.add("show_effect");3
-                pagination.classList.add("show_effect");
+    window.addEventListener("scroll", function () {
+        if (arrowContainer) {
+            arrowContainer.style.display = "none";
+        }
+        if(arrowContainerArticle){
+          arrowContainerArticle.style.display = "none";
+        }
+        if(arrowContainerTicket){
+          arrowContainerTicket.style.display = "none";
+        }
+    });
 
+    const tableWithEffect = document.querySelector(".table-with-effect");
+    const pagination = document.querySelector(".pagination");
+    if (tableWithEffect) {
+        tableWithEffect.classList.add("show_effect");
+        pagination.classList.add("show_effect");
+    }
+
+    // MA RECHERCHE ARTICLES !! 
+{% if articles is defined %}
+
+    const searchInput = document.getElementById('search');
+    const tableRows = document.querySelectorAll('#tab_article tbody tr');
+    const msg = document.getElementById('msg');
+    const tableValues = {{ articles|raw }};
+
+      searchInput.addEventListener('keyup', function () {
+        const search = searchInput.value.toLowerCase();
+
+        tableRows.forEach(function (row, vals) { // comme row as val en foreach php
+            const rowData = tableValues[vals];
+
+             const combinedData = Object.values(rowData).join(' ').toLowerCase(); //.join(' ') pour inclure les données échapée par un espace
+
+        if (combinedData.includes(search)) {
+            row.style.display = 'table-row';
+        } else {
+            row.style.display = 'none';
+            msg.innerHTML = "PAS DE RESULTATS";
+        }
+        });
+    });
+{% endif %}
+
+ // MA RECHERCHE TICKETS !!
+{% if tickets is defined %}
+    const searchInput = document.getElementById('search');
+    const tableRows = document.querySelectorAll('#tab_ticket tbody tr');
+    const msg = document.getElementById('msg');
+    const tableValues = {{ tickets|raw }};
+
+    // Show all rows initially
+    tableRows.forEach(function (row) {
+        row.style.display = 'table-row';
+    });
+
+    searchInput.addEventListener('keyup', function () {
+        const search = searchInput.value.toLowerCase();
+        let visibleRowCount = 0;
+
+        tableRows.forEach(function (row) {
+            const rowData = Array.from(row.cells).map(cell => cell.textContent).join(' ').toLowerCase();
+
+            if (rowData.includes(search)) {
+                row.style.display = 'table-row';
+                visibleRowCount++;
+            } else {
+                row.style.display = 'none';
             }
         });
 
-// mes flèches de direction pour ma ptite pagination
-$(document).ready(function() {
+        // Check if there are visible rows
+        if (visibleRowCount === 0) {
+            msg.innerHTML = "PAS DE RESULTATS";
+        } else {
+            msg.innerHTML = '';
+        }
+    });
+{% endif %}
+
+ // mes petites icones fontawesome pour ma petite pagination
+    $(document).ready(function() {
     $('.previous a').html('<i class="fa-solid fa-arrow-left"></i>');
 
     $('.first a').html('<i class="fa-solid fa-angles-left"></i>');
@@ -86,6 +154,7 @@ $(document).ready(function() {
     $('.last a').html('<i class="fa-solid fa-angles-right"></i>');
 });
 
+});
     </script>
 {% endblock %}
 </body>

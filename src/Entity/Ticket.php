@@ -5,6 +5,8 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\MaxDepth;
+
 
 /**
  * Ticket
@@ -91,11 +93,13 @@ class Ticket
      * @var \Doctrine\Common\Collections\Collection
      *
      * @ORM\OneToMany(targetEntity="Vendre", mappedBy="ticket")
+     * @MaxDepth(1)
      */
     private $vendres;
 
     /**
      * @return Collection|Vendre[]
+     * @MaxDepth(1)
      */
 
 
