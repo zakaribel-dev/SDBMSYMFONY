@@ -442,6 +442,26 @@ img {
   animation: volar 7s alternate infinite;
 }
 
+.my-4 {
+  margin-top: 1.5rem!important;
+  margin-bottom: 1.5rem!important;
+  border: 3px solid;
+}
+.beer30-error {
+  position: absolute;
+  transform: rotate(-21deg) scale(0.9);
+  margin-left: 35%;
+  margin-top: 10%;
+  animation: volar 7s alternate infinite;
+}
+.boca-error {
+    position: absolute;
+    width: 29px;
+    height: 9px;
+    border-radius: 77px 77px 0 0;
+    border-bottom: 22px solid black;
+    margin: 103px 55px;
+}
 .beer30-show {
   position: absolute;
   transform: rotate(-21deg) scale(0.9);

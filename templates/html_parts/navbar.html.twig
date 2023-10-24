@@ -3,7 +3,7 @@
 		<a class="navbar-brand" href="{{ path('app_home') }}">
 			{% trans %}Ma belle bière
 			{% endtrans %}
-			<i class="fa-solid fa-beer-mug-empty fa-bounce" style="color: #ffffff;"></i>
+			<i class="fa-solid fa-beer-mug-empty fa-bounce" style="color: #e8ae30;"></i>
 		</a>
 
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,18 +42,18 @@
 					</div>
 				</li>
 			</ul>
-			
-{% if app.request.attributes.get('_route') == 'app_article_index' %}
-    <div class="d-flex">
-        <input class="form-control" type="search" id="search" placeholder="{{ 'Recherche mot-clé'|trans }}" aria-label="Search">
-    </div>
-{% elseif app.request.attributes.get('_route') == 'app_tickets_index' %}
-    <div class="d-flex">
-        <input class="form-control" type="search" id="search" placeholder="{{ 'Date Edition ici'|trans }}" aria-label="Search">
-    </div>
-{% endif %}
 
-	
+			{% if app.request.attributes.get('_route') == 'app_article_index' %}
+				<div class="d-flex">
+					<input class="form-control" type="search" id="search" placeholder="{{ 'Recherche mot-clé'|trans }}" aria-label="Search">
+				</div>
+			{% elseif app.request.attributes.get('_route') == 'app_tickets_index' %}
+				<div class="d-flex">
+					<input class="form-control" type="search" id="search" placeholder="{{ 'Date Edition ici'|trans }}" aria-label="Search">
+				</div>
+			{% endif %}
+
+
 		</div>
 
 

@@ -52,8 +52,6 @@ class Article
      */
     private $idMarque;
 
-
-
     /**
      * @var \Typebiere|null
      *
