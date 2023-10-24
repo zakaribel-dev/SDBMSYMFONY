@@ -89,21 +89,27 @@ document.addEventListener("DOMContentLoaded", function () {
     const msg = document.getElementById('msg');
     const tableValues = {{ articles|raw }};
 
-      searchInput.addEventListener('keyup', function () {
+     searchInput.addEventListener('keyup', function () {
         const search = searchInput.value.toLowerCase();
+        let visibleRowCount = 0;
 
-        tableRows.forEach(function (row, vals) { // comme row as val en foreach php
-            const rowData = tableValues[vals];
+        tableRows.forEach(function (row) {
+            const rowData = Array.from(row.cells).map(cell => cell.textContent).join(' ').toLowerCase();
 
-             const combinedData = Object.values(rowData).join(' ').toLowerCase(); //.join(' ') pour inclure les données échapée par un espace
-
-        if (combinedData.includes(search)) {
-            row.style.display = 'table-row';
-        } else {
-            row.style.display = 'none';
-            msg.innerHTML = "PAS DE RESULTATS";
-        }
+            if (rowData.includes(search)) {
+                row.style.display = 'table-row';
+                visibleRowCount++;
+            } else {
+                row.style.display = 'none';
+            }
         });
+
+        if (visibleRowCount === 0) {
+            msg.innerHTML = "PAS DE RESULTATS";
+        } else {
+            msg.innerHTML = '';
+        }
+   
     });
 {% endif %}
 
@@ -114,7 +120,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const msg = document.getElementById('msg');
     const tableValues = {{ tickets|raw }};
 
-    // Show all rows initially
     tableRows.forEach(function (row) {
         row.style.display = 'table-row';
     });
@@ -134,7 +139,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // Check if there are visible rows
         if (visibleRowCount === 0) {
             msg.innerHTML = "PAS DE RESULTATS";
         } else {

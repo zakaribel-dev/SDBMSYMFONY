@@ -5,7 +5,7 @@
 body {
   background-color: #9f90cd;
 }
-.nav-item .current_lang{
+.nav-item .current_lang {
   color: white;
   float: right;
 }
@@ -54,8 +54,8 @@ body {
 }
 
 p {
- margin: 0;
- padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .jumbo {
@@ -180,16 +180,15 @@ tbody tr.active-row {
   padding: 3px;
   color: #170746;
 }
-.details_btn{
-padding: 8px;
+.details_btn {
+  padding: 8px;
 }
 
 .show_button:hover,
-.edit_button:hover{
+.edit_button:hover {
   transform: scale(1.2);
   transition: transform 0.3s ease-in-out;
 }
-
 
 .th_left {
   border-radius: 10px 0 0 0;
@@ -198,7 +197,6 @@ padding: 8px;
 .th_right {
   border-radius: 0 10px 0 0;
 }
-
 
 .new {
   background-color: #170746;
@@ -228,11 +226,11 @@ footer {
   margin-top: 1%;
 }
 
-img{
+img {
   width: 24px;
 }
 
-.uk{
+.uk {
   width: 28px;
 }
 
@@ -259,8 +257,8 @@ img{
 
 .arrow-container-article {
   position: fixed;
-  top: 90%;
-  left: 85%;
+  top: 94%;
+  left: 15%;
   transform: translateX(-50%);
   animation: fadeIn 1s ease-out forwards, bounceAnimation 2s infinite;
 }
@@ -280,11 +278,11 @@ img{
   display: none;
 }
 
-.newForm form{
+.newForm form {
   margin-top: -1%;
 }
 
-.deleteUp{
+.deleteUp {
   margin-top: -55px;
 }
 
@@ -309,7 +307,7 @@ img{
   .navbar-nav {
     margin-left: 10%;
   }
-  .uk{
+  .uk {
     width: 30px;
   }
   .dropdown-menu {
@@ -360,7 +358,7 @@ img{
   .beer30-vente {
     display: none;
   }
-  .beer30-show{
+  .beer30-show {
     display: none;
   }
   .beer30-edit {
@@ -373,10 +371,10 @@ img{
     margin-top: 4%;
   }
 
-  #search{
+  #search {
     margin-bottom: 5px !important;
   }
-  
+
   .arrow-container {
     display: none;
   }
@@ -387,42 +385,36 @@ img{
   .arrow-container-ticket {
     display: none;
   }
-
 }
 
-/* pc portable et bureau */
-@media only screen and (min-width: 1200px) {
-}
-
-/* Tablettes */
+/* Tablettes (pas fou pour l'instant, je verrai plus tard..)*/
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
-
-  .beer30{
+  .beer30 {
     display: none;
   }
-  .beer30-article{
+  .beer30-article {
     display: none;
   }
-  .beer30-edit{
-    display: none;
-  }
-
-  .beer30-show{
+  .beer30-edit {
     display: none;
   }
 
-  .beer30-ticket{
+  .beer30-show {
     display: none;
   }
 
-  .beer30-vente{
+  .beer30-ticket {
     display: none;
   }
 
-  .new{
+  .beer30-vente {
+    display: none;
+  }
+
+  .new {
     margin-left: 7%;
   }
-  .msgMobile{
+  .msgMobile {
     display: block;
   }
 }
@@ -438,18 +430,17 @@ img{
 .beer30-ticket {
   position: absolute;
   transform: rotate(-21deg) scale(0.9);
-  margin-left: 13%;
-  margin-top: 10%;
+  margin-left: 60%;
+  margin-top: 25%;
   animation: volar 7s alternate infinite;
 }
 .beer30-article {
   position: absolute;
   transform: rotate(-21deg) scale(0.9);
-  margin-left: 3%;
-  margin-top: 4%;
+  margin-left: -4%;
+  margin-top: 25%;
   animation: volar 7s alternate infinite;
 }
-
 
 .beer30-show {
   position: absolute;
@@ -475,7 +466,7 @@ img{
   animation: volar 7s alternate infinite;
 }
 
-.total{
+.total {
   text-decoration: underline;
 }
 
