@@ -166,7 +166,7 @@ tbody tr {
 }
 
 tbody tr:nth-of-type(even) {
-  background-color: rgb(138, 166, 147);
+  background-color: rgb(176 163 210);
 }
 
 tbody tr.active-row {

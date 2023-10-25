@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 {% block body %}
 
-<h1>Cette page n'existe pas &nbsp; &nbsp;<i class="fa-solid fa-exclamation fa-2xl"></i></h1>
+<h1>{% trans %}Cette page n'existe pas{% endtrans %} &nbsp; &nbsp;<i class="fa-solid fa-exclamation fa-2xl"></i></h1>
  <div class="beer30-error">
     <div class="bubles">
         <div class="b1"></div>
@@ -24,6 +24,6 @@
   </div>
   </div>
   <br>
-<a class="new" href="{{path('app_home')}}">Retour à la page d'accueil</a>
+<a class="new" href="{{path('app_home')}}">{% trans %}Retour à la page d'accueil{% endtrans %}</a>
 
 {% endblock %}

@@ -289,6 +289,22 @@
         <source>Date Edition ici</source>
         <target>Edition date here</target>
       </trans-unit>
+      <trans-unit id="RhSOJQ5" resname="Erreur">
+        <source>Erreur</source>
+        <target>Error</target>
+      </trans-unit>
+      <trans-unit id="A0kfbRi" resname="Retour à la page d'accueil">
+        <source>Retour à la page d'accueil</source>
+        <target>Back to home page</target>
+      </trans-unit>
+      <trans-unit id="H1A_wYS" resname="Cette page n'existe pas">
+        <source>Cette page n'existe pas</source>
+        <target>This page does not exist</target>
+      </trans-unit>
+      <trans-unit id="lTiGs5L" resname="Vous n'êtes pas autorisé à accéder à cette page">
+        <source>Vous n'êtes pas autorisé à accéder à cette page</source>
+        <target>Access denied</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
