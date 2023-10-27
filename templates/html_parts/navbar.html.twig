@@ -29,7 +29,8 @@
 						{% else %}
 							<img src="{{ asset('assets/images/france.png') }}" alt="FR">
 						{% endif %}
-					</a>
+					</a>    {{ dump(app.request.locale) }}
+
 					<div class="dropdown-menu">
 						<a class="dropdown-item" href="{{ path('app_langue_francais') }}">
 							Français
