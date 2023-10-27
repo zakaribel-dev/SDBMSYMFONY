@@ -42,7 +42,7 @@
 					</div>
 				</li>
 			</ul>
-{{ app.request.session.get('_locale') }}
+{{ dump(app.request.session.get('_locale')) }}
 
 			{% if app.request.attributes.get('_route') == 'app_article_index' %}
 				<div class="d-flex">
