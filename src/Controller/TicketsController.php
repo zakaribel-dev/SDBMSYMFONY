@@ -20,7 +20,7 @@ class TicketsController extends AbstractController
     {
         $tickets = $entityManager
             ->getRepository(Ticket::class)
-            ->findBy([], []);
+            ->findBy([], ['annee' => "DESC"]);
 
             $pagination = $paginator->paginate(
                 $tickets,

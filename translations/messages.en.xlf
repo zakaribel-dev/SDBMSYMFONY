@@ -9,9 +9,9 @@
         <source>Bienvenue</source>
         <target>Welcome</target>
       </trans-unit>
-      <trans-unit id="56H04IC" resname="C'est à l'aide du menu de la barre de navigation que vous pourrez manipuler votre stock de bières..">
-        <source>C'est à l'aide du menu de la barre de navigation que vous pourrez manipuler votre stock de bières..</source>
-        <target>Use the menu on top to navigate through your beer management</target>
+      <trans-unit id="56H04IC" resname="Utilisez le menu de navigation...">
+        <source>Utilisez le menu de navigation...</source>
+        <target>Use the navigation bar...</target>
       </trans-unit>
       <trans-unit id="LSWfCb9" resname="Langues">
         <source>Langues</source>
@@ -143,7 +143,7 @@
       </trans-unit>
       <trans-unit id="Xzo5Rnv" resname="Article bien modifié !">
         <source>Article bien modifié !</source>
-        <target>Articled successfully edited !</target>
+        <target>Article successfully edited !</target>
       </trans-unit>
       <trans-unit id="3Xj8sji" resname="Article bien supprimé !">
         <source>Article bien supprimé !</source>

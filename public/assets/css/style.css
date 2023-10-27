@@ -97,7 +97,7 @@ p {
 }
 
 .navbar-nav {
-  margin-left: 31%;
+  margin-left: 35%;
 }
 
 .nav-link {
@@ -111,6 +111,7 @@ h1 {
 .actions {
   width: 55px;
 }
+
 table {
   border-collapse: collapse;
   font-size: 0.9em;
@@ -118,7 +119,7 @@ table {
   font-size: 14px;
   box-shadow: 20px rgba(156, 199, 131, 0.15);
   margin-left: 15%;
-  margin-bottom: 1%;
+  margin-bottom: 5%;
   border-radius: 6px;
   box-shadow: 16px 3px 10px -7px #3a5f3e, -10px 0px 20px -7px #888;
 }
@@ -221,10 +222,7 @@ select {
   margin-left: 25px;
 }
 
-footer {
-  background-color: #170746;
-  margin-top: 1%;
-}
+
 
 img {
   width: 24px;
@@ -234,9 +232,9 @@ img {
   width: 28px;
 }
 
-.form-control {
-  width: 180px;
-  margin-left: 44%;
+#search{
+  margin-left: 20% !important;
+
 }
 
 .showArticle {
@@ -254,10 +252,14 @@ img {
   transform: translateX(-50%);
   animation: fadeIn 1s ease-out forwards, bounceAnimation 2s infinite;
 }
+.ml3 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
 
 .arrow-container-article {
   position: fixed;
-  top: 94%;
+  top: 85%;
   left: 15%;
   transform: translateX(-50%);
   animation: fadeIn 1s ease-out forwards, bounceAnimation 2s infinite;
@@ -279,7 +281,7 @@ img {
 }
 
 .newForm form {
-  margin-top: -1%;
+  margin: 0 auto;
 }
 
 .deleteUp {
@@ -305,10 +307,14 @@ img {
 /* mobiles */
 @media (max-width: 767px) {
   .navbar-nav {
-    margin-left: 10%;
+    margin-left: 5%;
   }
   .uk {
     width: 30px;
+  }
+  .ml3 {
+    font-weight: 900;
+    font-size: 3.5em;
   }
   .dropdown-menu {
     margin-right: 5%;
@@ -373,6 +379,7 @@ img {
 
   #search {
     margin-bottom: 5px !important;
+    margin-left: 25% !important;
   }
 
   .arrow-container {
@@ -391,6 +398,10 @@ img {
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
   .beer30 {
     display: none;
+  }
+  .ml3 {
+    font-weight: 900;
+    font-size: 3.5em;
   }
   .beer30-article {
     display: none;
@@ -418,6 +429,19 @@ img {
     display: block;
   }
 }
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #170746;
+  margin-top: 5%; 
+}
+.form-control {
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .beer30 {
   position: absolute;

@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% trans %}Ticket{% endtrans %}{% endblock %}
+
+{% block body %}
+<br>
+    <a class="new" href="{{ path('app_tickets_index') }}">{% trans %}Retour aux tickets{% endtrans %}</a>
+<div class="beer30-show">
+    <div class="bubles">
+        <div class="b1"></div>
+        <div class="b2"></div>
+        <div class="b3"></div>
+        <div class="b4"></div>
+        <div class="b5"></div>
+        <div class="b6"></div>
+        <div class="b7"></div>
+        <div class="b8"></div>
+        <div class="b9"></div>
+     </div> 
+  <div class="beer3"></div>
+  <div class="beer">
+    <div class="ojos"><div class="iris"></div></div>
+    <div class="ojos3"><div class="iris"></div></div>
+    <div class="boca"></div>
+    <div class="line"></div>
+    <div class="rastro"></div>
+  </div>
+  </div>
+    <h1>{% trans %}Ticket{% endtrans %}</h1>
+    <div class="container">
+    <table class="showTicket">
+        <tbody>
+            <tr>
+                <th class="th_left">{% trans %}Annee{% endtrans %}</th>
+                <td class="th_right">{{ ticket.annee }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Numero Ticket {% endtrans %}</th>
+                <td>{{ ticket.numeroTicket }}</td>
+            </tr>
+            <tr>
+                <th>{% trans %}Date Vente {% endtrans %}</th>
+                <td>{{ ticket.dateVente ? ticket.dateVente|date('d/m à H:i:s') : '' }}</td>
+            </tr>
+           
+        </tbody>
+    </table>
+</div>
+<br><br>
+    
+{% endblock %}

@@ -24,7 +24,7 @@
 
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbardrop" role="button" data-bs-toggle="dropdown">
-						{% if app.request.session.get('_locale') == 'en' or app.request.session.get('_locale') is null %}
+						{% if app.request.session.get('_locale') == 'en' %}
 							<img class="uk" src="{{ asset('assets/images/uk.png') }}" alt="EN">
 						{% else %}
 							<img src="{{ asset('assets/images/france.png') }}" alt="FR">

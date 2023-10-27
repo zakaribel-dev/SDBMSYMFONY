@@ -3,12 +3,15 @@
 {% block title %}Edit Article{% endblock %}
 
 {% block body %}
+
 <br>
     <a class="new" href="{{ path('app_article_index') }}">{% trans %}Retour aux articles {% endtrans %}</a> <br>
 
     <h1>{% trans %}Modifier l'article{% endtrans %}</h1>
+  
 {{ include('article/_form.html.twig', {'button_label': 'Enregistrer modification(s)'|trans}) }}
 
 
     {{ include('article/_delete_form.html.twig') }}
+    
 {% endblock %}
