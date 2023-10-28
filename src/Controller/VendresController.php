@@ -116,7 +116,8 @@ class VendresController extends AbstractController
             'vendre' => $vendre, // pour mon form
             'form' => $form,
             'numeroTicket' => $numeroTicket,
-            'vendres' => $vendres // pour recup le nom dlarticle
+            'vendres' => $vendres,// pour recup le nom dlarticle
+            'annee' => $annee 
         ]);
     }
 
