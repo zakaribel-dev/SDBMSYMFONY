@@ -4,7 +4,7 @@
 
 {% block body %}
 <br>
-    <a class="new" href="{{ path('app_article_index') }}">{% trans %}Retour vers articles{% endtrans %}</a><br>
+    <a class="new" href="{{ path('app_article_index') }}"><i class="fa-solid fa-arrow-left"></i></a><br>
 <div class="beer30-showArticle">
     <div class="bubles">
         <div class="b1"></div>
@@ -29,9 +29,7 @@
     <h1>{{ article.nomArticle }}</h1>
  
     <div class="container">
-      <div class="arrow-container">
-        <i class="fas fa-arrow-down fa-2x"></i>
-    </div>
+
     <table class="showArticle">
     
         <tbody>
