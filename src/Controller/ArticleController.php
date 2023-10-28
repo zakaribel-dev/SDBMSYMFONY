@@ -28,7 +28,7 @@ class ArticleController extends AbstractController
         $pagination = $paginator->paginate(
             $articles,
             $request->query->getInt('page', 1),
-            10
+            20
         );
 
         $pagination->setCustomParameters(['addClass' => 'new']);

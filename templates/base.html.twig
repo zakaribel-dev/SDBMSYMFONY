@@ -63,6 +63,8 @@ Swal.fire({
 document.addEventListener("DOMContentLoaded", function () {
     const arrowContainer = document.querySelector(".arrow-container");
     const arrowContainerTicket = document.querySelector('.arrow-container-ticket');
+    const arrowContainerArticle = document.querySelector('.arrow-container-article');
+
     const arrowDown = document.querySelector(".fa-arrow-down");
 
     if (arrowDown) {
@@ -76,6 +78,10 @@ document.addEventListener("DOMContentLoaded", function () {
     
         if(arrowContainerTicket){
           arrowContainerTicket.style.display = "none";
+        }
+
+        if(arrowContainerArticle){
+          arrowContainerArticle.style.display = "none";
         }
     });
 

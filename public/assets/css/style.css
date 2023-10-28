@@ -128,7 +128,7 @@ th,
 tr {
   background-color: #009879;
   color: #170746;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 th,
@@ -140,10 +140,13 @@ td {
   padding: 4px;
 }
 
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  max-width: 1700px;
+}
+
 th {
   color: white;
   background-color: #170746;
-  font-size: 15px;
   height: 80px;
   padding: 20px;
 }
@@ -168,11 +171,11 @@ tbody tr.active-row {
 .show_button,
 .edit_button {
   height: 30px;
-  padding: 3px;
+  padding: 5px;
   color: #170746;
 }
 .details_btn {
-  padding: 8px;
+  padding: 14px;
 }
 
 .show_button:hover,
@@ -238,7 +241,15 @@ img {
 .arrow-container-ticket {
   position: fixed;
   top: 90%;
-  left: 90%;
+  left: 96%;
+  transform: translateX(-50%);
+  animation: fadeIn 1s ease-out forwards, bounceAnimation 2s infinite;
+}
+
+.arrow-container-article {
+  position: fixed;
+  top: 60%;
+  left: 2%;
   transform: translateX(-50%);
   animation: fadeIn 1s ease-out forwards, bounceAnimation 2s infinite;
 }
@@ -307,6 +318,7 @@ img {
     width: 180px;
     margin-left: 27%;
   }
+
 
   .arrow-container {
     position: fixed;
@@ -423,18 +435,20 @@ footer {
 .beer30-ticket {
   position: absolute;
   transform: rotate(-21deg) scale(0.9);
-  margin-left: 80%;
-  margin-top: 29%;
+  margin-left: 71%;
+  margin-top: 2%;
   animation: volar 7s alternate infinite;
 }
 
 .beer30-article {
   position: absolute;
   transform: rotate(-21deg) scale(0.9);
-  margin-left: -4%;
-  margin-top: 25%;
+  margin-left: 10%;
+  margin-top: 43px;
   animation: volar 7s alternate infinite;
 }
+
+
 
 .my-4 {
   margin-top: 1.5rem!important;
@@ -484,7 +498,7 @@ footer {
   position: absolute;
   transform: rotate(-21deg) scale(0.9);
   margin-left: 81%;
-  margin-top: 5%;
+  margin-top: -2%;
   animation: volar 7s alternate infinite;
 }
 
