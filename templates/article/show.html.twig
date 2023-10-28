@@ -5,7 +5,7 @@
 {% block body %}
 <br>
     <a class="new" href="{{ path('app_article_index') }}">{% trans %}Retour vers articles{% endtrans %}</a><br>
-<div class="beer30-show">
+<div class="beer30-showArticle">
     <div class="bubles">
         <div class="b1"></div>
         <div class="b2"></div>
@@ -69,6 +69,7 @@
             </tr>
         </tbody>
     </table>
+    <br>
         <a class="btn btn-primary" href="{{ path('app_article_edit', {'idArticle': article.idArticle}) }}">{% trans %}Modifier cet article{% endtrans %}</a> <br><br>
     </div>
 

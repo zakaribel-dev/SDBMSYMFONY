@@ -153,11 +153,15 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             msg.innerHTML = '';
         }
+        
     });
 {% endif %}
 
- // mes petites icones fontawesome pour ma petite pagination
+ // mes petites icones fontawesome pour ma petite pagination + carousel
     $(document).ready(function() {
+
+       $('.carousel').carousel();
+
     $('.previous a').html('<i class="fa-solid fa-arrow-left"></i>');
 
     $('.first a').html('<i class="fa-solid fa-angles-left"></i>');
@@ -165,6 +169,8 @@ document.addEventListener("DOMContentLoaded", function () {
     $('.next a').html('<i class="fa-solid fa-arrow-right"></i>');
 
     $('.last a').html('<i class="fa-solid fa-angles-right"></i>');
+
+
 });
 
 

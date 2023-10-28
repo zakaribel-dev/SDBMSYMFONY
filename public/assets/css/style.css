@@ -111,38 +111,28 @@ h1 {
 .actions {
   width: 55px;
 }
-
 table {
   border-collapse: collapse;
   font-size: 0.9em;
   font-family: "Play", sans-serif;
   font-size: 14px;
   box-shadow: 20px rgba(156, 199, 131, 0.15);
-  margin-left: 15%;
-  margin-bottom: 5%;
+  width: 100%;
   border-radius: 6px;
   box-shadow: 16px 3px 10px -7px #3a5f3e, -10px 0px 20px -7px #888;
 }
 
-.table_tickets {
-  margin-left: 35%;
-  margin-bottom: 5%;
-}
-.table_tickets td {
-  padding: 9px;
-}
-.vente_table {
-  margin-left: 27%;
-}
+
+
 th,
 tr {
   background-color: #009879;
   color: #170746;
+  font-size: 15px;
 }
 
 th,
 td {
-  padding: 2px;
   width: 100px;
   box-sizing: border-box;
 }
@@ -237,14 +227,6 @@ img {
 
 }
 
-.showArticle {
-  margin-left: 42%;
-}
-
-.showTicket {
-  margin-left: 42%;
-}
-
 .arrow-container {
   position: fixed;
   top: 30%;
@@ -257,17 +239,12 @@ img {
   font-size: 3.5em;
 }
 
-.arrow-container-article {
-  position: fixed;
-  top: 85%;
-  left: 15%;
-  transform: translateX(-50%);
-  animation: fadeIn 1s ease-out forwards, bounceAnimation 2s infinite;
-}
+
+
 .arrow-container-ticket {
   position: fixed;
   top: 90%;
-  left: 66%;
+  left: 90%;
   transform: translateX(-50%);
   animation: fadeIn 1s ease-out forwards, bounceAnimation 2s infinite;
 }
@@ -430,12 +407,13 @@ img {
   }
 }
 footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  background-color: #170746;
-  margin-top: 5%; 
+  position: relative !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  margin-top: 5% !important; 
+  background-color: #170746 !important;
 }
+
 .form-control {
   width: 180px;
   margin-left: auto;
@@ -454,10 +432,11 @@ footer {
 .beer30-ticket {
   position: absolute;
   transform: rotate(-21deg) scale(0.9);
-  margin-left: 60%;
-  margin-top: 25%;
+  margin-left: 80%;
+  margin-top: 29%;
   animation: volar 7s alternate infinite;
 }
+
 .beer30-article {
   position: absolute;
   transform: rotate(-21deg) scale(0.9);
@@ -489,8 +468,16 @@ footer {
 .beer30-show {
   position: absolute;
   transform: rotate(-21deg) scale(0.9);
-  margin-left: 19%;
-  margin-top: 9%;
+  margin-left: 40%;
+  margin-top: 22%;
+  animation: volar 7s alternate infinite;
+}
+
+.beer30-showArticle {
+  position: absolute;
+  transform: rotate(-21deg) scale(0.9);
+  margin-left: 81%;
+  margin-top: 22%;
   animation: volar 7s alternate infinite;
 }
 
@@ -505,7 +492,7 @@ footer {
 .beer30-vente {
   position: absolute;
   transform: rotate(-21deg) scale(0.9);
-  margin-left: 64%;
+  margin-left: 81%;
   margin-top: 5%;
   animation: volar 7s alternate infinite;
 }
