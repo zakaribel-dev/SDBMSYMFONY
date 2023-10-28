@@ -62,7 +62,6 @@ Swal.fire({
     <script>
 document.addEventListener("DOMContentLoaded", function () {
     const arrowContainer = document.querySelector(".arrow-container");
-    const arrowContainerArticle = document.querySelector('.arrow-container-article');
     const arrowContainerTicket = document.querySelector('.arrow-container-ticket');
     const arrowDown = document.querySelector(".fa-arrow-down");
 
@@ -74,9 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (arrowContainer) {
             arrowContainer.style.display = "none";
         }
-        if(arrowContainerArticle){
-          arrowContainerArticle.style.display = "none";
-        }
+    
         if(arrowContainerTicket){
           arrowContainerTicket.style.display = "none";
         }
