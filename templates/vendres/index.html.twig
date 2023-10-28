@@ -28,7 +28,7 @@
     <div class="rastro"></div>
   </div>
   </div>
-<a class="new" role="button" href="{{ path('app_vendres_new', {'numeroTicket': numeroTicket}) }}">{% trans %}NOUVELLE LIGNE{% endtrans %}</a>
+<a class="new" role="button" href="{{ path('app_vendres_new', {'numeroTicket': numeroTicket, 'annee' : annee}) }}">{% trans %}NOUVELLE LIGNE{% endtrans %}</a>
 <br> <br>
 <div class="container">
         <div class="table-responsive">
@@ -59,7 +59,8 @@
                       'idArticle': vendre.getIdArticle(),
                       'qte' : vendre.getQuantite(),
                       'prix': vendre.getPrixVente(),
-                      'numeroTicket':numeroTicket
+                      'numeroTicket':numeroTicket,
+                      'annee':annee
                       }) 
                       }}"><i class="fa-regular fa-pen-to-square edit_button" ></i></a></td>
                 </tr>
