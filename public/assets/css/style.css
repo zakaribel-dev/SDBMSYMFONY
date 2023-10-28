@@ -227,13 +227,7 @@ img {
 
 }
 
-.arrow-container {
-  position: fixed;
-  top: 30%;
-  left: 40%;
-  transform: translateX(-50%);
-  animation: fadeIn 1s ease-out forwards, bounceAnimation 2s infinite;
-}
+
 .ml3 {
   font-weight: 900;
   font-size: 3.5em;
