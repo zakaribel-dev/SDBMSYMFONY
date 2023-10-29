@@ -29,6 +29,7 @@
     <h1>{{ article.nomArticle }}</h1>
  
     <div class="container">
+<div class="table-responsive">
 
     <table class="showArticle">
     
@@ -67,6 +68,8 @@
             </tr>
         </tbody>
     </table>
+        </div>
+
     <br>
         <a class="btn btn-primary" href="{{ path('app_article_edit', {'idArticle': article.idArticle}) }}">{% trans %}Modifier cet article{% endtrans %}</a> <br><br>
     </div>

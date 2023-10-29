@@ -122,8 +122,6 @@ table {
   box-shadow: 16px 3px 10px -7px #3a5f3e, -10px 0px 20px -7px #888;
 }
 
-
-
 th,
 tr {
   background-color: #009879;
@@ -140,7 +138,12 @@ td {
   padding: 4px;
 }
 
-.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
   max-width: 1700px;
 }
 
@@ -215,8 +218,6 @@ select {
   margin-left: 25px;
 }
 
-
-
 img {
   width: 24px;
 }
@@ -225,18 +226,14 @@ img {
   width: 28px;
 }
 
-#search{
+#search {
   margin-left: 20% !important;
-
 }
-
 
 .ml3 {
   font-weight: 900;
   font-size: 3.5em;
 }
-
-
 
 .arrow-container-ticket {
   position: fixed;
@@ -319,7 +316,6 @@ img {
     margin-left: 27%;
   }
 
-
   .arrow-container {
     position: fixed;
     top: 30%;
@@ -328,11 +324,9 @@ img {
     animation: fadeIn 1s ease-out forwards, bounceAnimation 2s infinite;
   }
 
-  .showArticle {
-    margin-left: 22%;
-  }
-  .showTicket {
-    margin-left: 20%;
+
+  .beer30-showArticle {
+    display: none;
   }
 
   .beer30-ticket {
@@ -413,7 +407,7 @@ footer {
   position: relative !important;
   bottom: 0 !important;
   width: 100% !important;
-  margin-top: 5% !important; 
+  margin-top: 5% !important;
   background-color: #170746 !important;
 }
 
@@ -422,7 +416,6 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
-
 
 .beer30 {
   position: absolute;
@@ -448,11 +441,9 @@ footer {
   animation: volar 7s alternate infinite;
 }
 
-
-
 .my-4 {
-  margin-top: 1.5rem!important;
-  margin-bottom: 1.5rem!important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
   border: 3px solid;
 }
 .beer30-error {
@@ -463,12 +454,12 @@ footer {
   animation: volar 7s alternate infinite;
 }
 .boca-error {
-    position: absolute;
-    width: 29px;
-    height: 9px;
-    border-radius: 77px 77px 0 0;
-    border-bottom: 22px solid black;
-    margin: 103px 55px;
+  position: absolute;
+  width: 29px;
+  height: 9px;
+  border-radius: 77px 77px 0 0;
+  border-bottom: 22px solid black;
+  margin: 103px 55px;
 }
 .beer30-show {
   position: absolute;
@@ -481,8 +472,7 @@ footer {
 .beer30-showArticle {
   position: absolute;
   transform: rotate(-21deg) scale(0.9);
-  margin-left: 81%;
-  margin-top: 22%;
+  margin-left: 3%;
   animation: volar 7s alternate infinite;
 }
 
