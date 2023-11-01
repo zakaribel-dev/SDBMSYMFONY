@@ -116,10 +116,10 @@ table {
   font-size: 0.9em;
   font-family: "Play", sans-serif;
   font-size: 14px;
-  box-shadow: 20px rgba(156, 199, 131, 0.15);
-  width: 100%;
+  width: 90%;
   border-radius: 6px;
   box-shadow: 16px 3px 10px -7px #3a5f3e, -10px 0px 20px -7px #888;
+  margin-left: 5%;
 }
 
 th,
@@ -243,13 +243,13 @@ img {
   animation: fadeIn 1s ease-out forwards, bounceAnimation 2s infinite;
 }
 
-.arrow-container-article {
+/* .arrow-container-article {
   position: fixed;
   top: 60%;
   left: 2%;
   transform: translateX(-50%);
   animation: fadeIn 1s ease-out forwards, bounceAnimation 2s infinite;
-}
+} */
 
 .bounce {
   animation: bounceAnimation 2s infinite;
@@ -297,11 +297,6 @@ img {
   }
   .dropdown-menu {
     margin-right: 5%;
-  }
-  table,
-  .table_tickets,
-  .vente_table {
-    margin-left: 5px;
   }
 
   .table_tickets td {
