@@ -317,9 +317,6 @@ img {
     margin-right: 5%;
   }
 
-  .table_tickets td {
-    padding: 12px;
-  }
   .msgMobile {
     display: block;
   }
@@ -360,11 +357,17 @@ img {
   .beer30-edit {
     display: none;
   }
-  .table_tickets td {
-    padding: 9px;
-  }
+
   .table_tickets {
     margin-top: 4%;
+    margin-left: -4%;
+  }
+  .showTicket{
+    margin-left: 25%;
+    margin-top: 15%;
+  }
+  #tab_article{
+    margin: 0 auto;
   }
 
   #search {
