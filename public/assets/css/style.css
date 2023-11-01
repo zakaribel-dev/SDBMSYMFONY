@@ -122,6 +122,28 @@ table {
   margin-left: 5%;
 }
 
+.showArticle{
+  border-collapse: collapse;
+  font-size: 0.9em;
+  font-family: "Play", sans-serif;
+  font-size: 14px;
+  width: 30%;
+  border-radius: 6px;
+  box-shadow: 16px 3px 10px -7px #3a5f3e, -10px 0px 20px -7px #888;
+  margin-left: 35%;
+}
+
+.showTicket{
+  border-collapse: collapse;
+  font-size: 0.9em;
+  font-family: "Play", sans-serif;
+  font-size: 14px;
+  width: 15%;
+  border-radius: 6px;
+  box-shadow: 16px 3px 10px -7px #3a5f3e, -10px 0px 20px -7px #888;
+  margin-left: 42%;
+}
+
 th,
 tr {
   background-color: #009879;
@@ -230,26 +252,22 @@ img {
   margin-left: 20% !important;
 }
 
+
+
 .ml3 {
   font-weight: 900;
   font-size: 3.5em;
 }
 
-.arrow-container-ticket {
+
+
+.arrow-container-show {
   position: fixed;
-  top: 90%;
-  left: 96%;
+  top: 60%;
+  left: 25%;
   transform: translateX(-50%);
   animation: fadeIn 1s ease-out forwards, bounceAnimation 2s infinite;
 }
-
-/* .arrow-container-article {
-  position: fixed;
-  top: 60%;
-  left: 2%;
-  transform: translateX(-50%);
-  animation: fadeIn 1s ease-out forwards, bounceAnimation 2s infinite;
-} */
 
 .bounce {
   animation: bounceAnimation 2s infinite;
@@ -459,7 +477,7 @@ footer {
 .beer30-show {
   position: absolute;
   transform: rotate(-21deg) scale(0.9);
-  margin-left: 40%;
+  margin-left: 20%;
   margin-top: 22%;
   animation: volar 7s alternate infinite;
 }
