@@ -45,7 +45,12 @@
         </thead>
         <tbody>
             {% set total = 0 %}  
-  
+
+      {% if vendres is empty %}
+        <tr>
+            <td colspan="6">Pas encore de ligne de ce ticket !</td>
+        </tr>
+    {% else %}
             {% for vendre in vendres %}
                 <tr>
                     <td>{{ vendre.getIdArticle() }}</td>
@@ -64,8 +69,9 @@
                       }) 
                       }}"><i class="fa-regular fa-pen-to-square edit_button" ></i></a></td>
                 </tr>
-            {% endfor %}
 
+            {% endfor %}
+            {% endif %}
         </tbody>
         
     <div class="msgMobile"><i>{% trans %}Glissez le tableau vers la droite pour le voir en entier{% endtrans %} <i class="fa-solid fa-arrow-right"></i></div>
