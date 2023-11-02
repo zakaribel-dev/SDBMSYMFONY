@@ -156,9 +156,7 @@ td {
   width: 100px;
   box-sizing: border-box;
 }
-.table_tickets td {
-  padding: 4px;
-}
+
 
 .container,
 .container-lg,
@@ -360,7 +358,6 @@ img {
 
   .table_tickets {
     margin-top: 4%;
-    margin-left: -4%;
   }
   .showTicket{
     margin-left: 25%;
