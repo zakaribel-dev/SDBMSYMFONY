@@ -382,7 +382,32 @@ img {
   .arrow-container-ticket {
     display: none;
   }
+  .arrow-container-show{
+    margin-left: -5%;
+  }
+
+  .showArticle{
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: "Play", sans-serif;
+    font-size: 14px;
+    width: 30%;
+    border-radius: 6px;
+    box-shadow: 16px 3px 10px -7px #3a5f3e, -10px 0px 20px -7px #888;
+    margin-left: 30%;
+  }
+
 }
+
+.navbar-toggler {
+  border: 2px solid;
+  border-color: rgb(245, 241, 243);
+} 
+
+
+
+
+
 
 /* Tablettes (pas fou pour l'instant, je verrai plus tard..)*/
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
