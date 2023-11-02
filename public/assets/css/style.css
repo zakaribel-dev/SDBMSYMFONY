@@ -380,7 +380,7 @@ img {
     display: none;
   }
   .arrow-container-show{
-    margin-left: -5%;
+    display: none;
   }
 
   .showArticle{
@@ -441,6 +441,21 @@ img {
     display: block;
   }
 }
+
+
+/* pour mon iphone 15 pro max je dois faire ce media query (trouvé sur S-O) */
+@media only screen 
+and (device-width: 428px) 
+and (device-height: 926px) 
+and (-webkit-device-pixel-ratio: 3) {
+  .beer30-showArticle {
+    display: none;
+  }
+  .arrow-container-show{
+    display: none;
+  }
+ }
+
 footer {
   position: relative !important;
   bottom: 0 !important;
