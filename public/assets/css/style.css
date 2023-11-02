@@ -367,6 +367,10 @@ img {
     margin: 0 auto;
   }
 
+  .table_tickets {
+    margin: 0 auto;
+  }
+
   #search {
     margin-bottom: 5px !important;
     margin-left: 25% !important;
@@ -454,6 +458,7 @@ and (-webkit-device-pixel-ratio: 3) {
   .arrow-container-show{
     display: none;
   }
+
  }
 
 footer {
