@@ -41,4 +41,16 @@ public function __toString(): string
     return $this->nomCouleur; 
 }
 
+public function getIdCouleur(): ?int
+{
+    return $this->idCouleur;
+}
+
+public function setNomCouleur(string $nomCouleur): static
+{
+    $this->nomCouleur = $nomCouleur;
+
+    return $this;
+}
+
 }

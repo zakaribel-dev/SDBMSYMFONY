@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Logins{% endblock %}
+
+{% block body %}
+    <h1>Logins</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ login.id }}</td>
+            </tr>
+            <tr>
+                <th>Login</th>
+                <td>{{ login.login }}</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>{{ login.password }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_logins_index') }}">back to list</a>
+
+    <a href="{{ path('app_logins_edit', {'id': login.id}) }}">edit</a>
+
+    {{ include('logins/_delete_form.html.twig') }}
+{% endblock %}

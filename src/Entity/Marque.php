@@ -58,4 +58,40 @@ class Marque
     {
         return $this->nomMarque;
     }
+
+    public function getIdMarque(): ?int
+    {
+        return $this->idMarque;
+    }
+
+    public function setNomMarque(string $nomMarque): static
+    {
+        $this->nomMarque = $nomMarque;
+
+        return $this;
+    }
+
+    public function getIdPays(): ?Pays
+    {
+        return $this->idPays;
+    }
+
+    public function setIdPays(?Pays $idPays): static
+    {
+        $this->idPays = $idPays;
+
+        return $this;
+    }
+
+    public function getIdFabricant(): ?Fabricant
+    {
+        return $this->idFabricant;
+    }
+
+    public function setIdFabricant(?Fabricant $idFabricant): static
+    {
+        $this->idFabricant = $idFabricant;
+
+        return $this;
+    }
 }

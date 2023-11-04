@@ -28,5 +28,22 @@ class Fabricant
      */
     private $nomFabricant;
 
+    public function getIdFabricant(): ?int
+    {
+        return $this->idFabricant;
+    }
+
+    public function getNomFabricant(): ?string
+    {
+        return $this->nomFabricant;
+    }
+
+    public function setNomFabricant(string $nomFabricant): static
+    {
+        $this->nomFabricant = $nomFabricant;
+
+        return $this;
+    }
+
 
 }

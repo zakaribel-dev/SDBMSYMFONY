@@ -38,5 +38,34 @@ class Pays
      */
     private $idContinent;
 
+    public function getIdPays(): ?int
+    {
+        return $this->idPays;
+    }
+
+    public function getNomPays(): ?string
+    {
+        return $this->nomPays;
+    }
+
+    public function setNomPays(string $nomPays): static
+    {
+        $this->nomPays = $nomPays;
+
+        return $this;
+    }
+
+    public function getIdContinent(): ?Continent
+    {
+        return $this->idContinent;
+    }
+
+    public function setIdContinent(?Continent $idContinent): static
+    {
+        $this->idContinent = $idContinent;
+
+        return $this;
+    }
+
 
 }

@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\MaxDepth;
 
@@ -107,5 +108,27 @@ class Ticket
     public function getVendres(): Collection 
     {
         return $this->vendres;
+    }
+
+    public function addVendre(Vendre $vendre): static
+    {
+        if (!$this->vendres->contains($vendre)) {
+            $this->vendres->add($vendre);
+            $vendre->setTicket($this);
+        }
+
+        return $this;
+    }
+
+    public function removeVendre(Vendre $vendre): static
+    {
+        if ($this->vendres->removeElement($vendre)) {
+            // set the owning side to null (unless already changed)
+            if ($vendre->getTicket() === $this) {
+                $vendre->setTicket(null);
+            }
+        }
+
+        return $this;
     }
 }

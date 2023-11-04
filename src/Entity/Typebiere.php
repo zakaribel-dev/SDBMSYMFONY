@@ -36,6 +36,18 @@ class Typebiere
     {
         return $this->nomType;
     }
+
+    public function getIdType(): ?int
+    {
+        return $this->idType;
+    }
+
+    public function setNomType(string $nomType): static
+    {
+        $this->nomType = $nomType;
+
+        return $this;
+    }
     
   
 }

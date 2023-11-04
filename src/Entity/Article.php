@@ -10,6 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="article", indexes={@ORM\Index(name="IDX_23A0E66F7270350", columns={"ID_MARQUE"}), @ORM\Index(name="IDX_23A0E66F97A9A35", columns={"ID_TYPE"}), @ORM\Index(name="IDX_23A0E66107951FC", columns={"ID_COULEUR"})})
  * @ORM\Entity
  */
+
 class Article
 {
     /**

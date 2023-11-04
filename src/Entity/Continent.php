@@ -10,6 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="continent")
  * @ORM\Entity
  */
+
 class Continent
 {
     /**
@@ -27,6 +28,23 @@ class Continent
      * @ORM\Column(name="NOM_CONTINENT", type="string", length=25, nullable=false)
      */
     private $nomContinent;
+
+    public function getIdContinent(): ?int
+    {
+        return $this->idContinent;
+    }
+
+    public function getNomContinent(): ?string
+    {
+        return $this->nomContinent;
+    }
+
+    public function setNomContinent(string $nomContinent): static
+    {
+        $this->nomContinent = $nomContinent;
+
+        return $this;
+    }
 
 
 }
