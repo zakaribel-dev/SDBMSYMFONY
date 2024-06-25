@@ -65,6 +65,4 @@ class Logins
 
         return $this;
     }
-
-
 }
